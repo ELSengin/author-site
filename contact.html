@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Erick L. Sokn</title>
+<meta name="description" content="Erick L. Sokn — engineering consulting, engineering education, and writing.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"><div class="site-shell header-inner">
+<a class="brand" href="index.html"><span class="brand-name">Erick L. Sokn</span><span class="brand-sub">Engineering Consultant | Author</span></a>
+<nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="engineering.html">Engineering</a><a href="education.html">Engineering Education</a><a href="writing.html">Writing</a><a href="about.html">About</a><a href="contact.html" aria-current="page">Contact</a></nav>
+</div></header>
+<main>
+<section class="page-head">
+  <div class="site-shell">
+    <div class="eyebrow">Contact</div>
+    <h1>Contact</h1>
+    <p>For engineering consulting, engineering education, writing, speaking, or general inquiries.</p>
+  </div>
+</section>
+
+<section class="section compact">
+  <div class="site-shell">
+    <div class="grid-2">
+      <div class="card">
+        <h2>Send a Message</h2>
+        <form class="contact-form" action="https://formsubmit.co/erick.sokn@synergymoldingtech.com" method="POST">
+          <input type="hidden" name="_subject" value="Website inquiry — synergymoldingtech.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <label>Name
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+
+          <label>Email
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+
+          <label>Inquiry Type
+            <select name="inquiry_type">
+              <option>Engineering Consulting</option>
+              <option>Engineering Education</option>
+              <option>Writing</option>
+              <option>Speaking</option>
+              <option>General Inquiry</option>
+            </select>
+          </label>
+
+          <label>Subject
+            <input type="text" name="subject">
+          </label>
+
+          <label>Message
+            <textarea name="message" required></textarea>
+          </label>
+
+          <button class="button" type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <aside class="card">
+        <h2>Contact</h2>
+        <p>Messages submitted through this form are directed to:</p>
+        <p><strong>erick.sokn@synergymoldingtech.com</strong></p>
+        <p class="small">GitHub Pages cannot send email directly, so the form uses a third-party static-site form handler.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer"><div class="site-shell footer-inner"><span>Erick L. Sokn</span><span>Engineering Consulting · Engineering Education · Writing</span></div></footer>
+<script src="assets/js/site.js"></script>
+</body></html>
