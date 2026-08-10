@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Choir | Erick L. Sokn</title>
+<meta name="description" content="Erick L. Sokn — engineering consulting, engineering education, and writing.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"><div class="site-shell header-inner">
+<a class="brand" href="../index.html"><span class="brand-name">Erick L. Sokn</span><span class="brand-sub">Engineering Consultant | Author</span></a>
+<nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../engineering.html">Engineering</a><a href="../education.html">Engineering Education</a><a href="../writing.html" aria-current="page">Writing</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+<main>
+<section class="page-head"><div class="site-shell"><div class="eyebrow">Poetry</div><h1>One Choir</h1><p class="pub-credit">Originally published in <em>Möbius: The Poetry Magazine — 2000</em>.</p></div></section>
+<section class="section compact"><div class="site-shell"><div class="poem">
+I sat alone one evening,
+Far from the noise of Man,
+Just me, the frogs, and the crickets,
+As darkness enveloped the land.
+ 
+They sang—their music relaxing,
+A chorus that sang from the heart,
+On a knoll in the middle of nowhere
+I listened while each played his part.
+ 
+Each sang for its own reasons,
+In differing language and tone,
+Independent of all other voices,
+But never quite singing alone.
+ 
+Complex and subtle this chorus
+Beneath a million small suns,
+Connecting the one to the many,
+Condensing the many to One.
+</div></div></section>
+</main>
+<footer class="site-footer"><div class="site-shell footer-inner"><span>Erick L. Sokn</span><span>Engineering Consulting · Engineering Education · Writing</span></div></footer>
+<script src="../assets/js/site.js"></script>
+</body></html>
