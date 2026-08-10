@@ -38,7 +38,7 @@ window.WRITING_ITEMS = [
     title: "Something is Missing",
     type: "Poem",
     publication: "Möbius: The Poetry Magazine",
-    description: "Previously published in Möbius: The Poetry Magazine — 2000.",
+    description: "Previously published in Möbius: The Poetry Magazine — Spring 2000.",
     internalUrl: "writing/something-is-missing.html"
   },
   {
@@ -46,7 +46,15 @@ window.WRITING_ITEMS = [
     title: "The Dance of Phantoms",
     type: "Poem",
     publication: "Möbius: The Poetry Magazine",
-    description: "Previously published in Möbius: The Poetry Magazine — 2000.",
+    description: "Previously published in Möbius: The Poetry Magazine — Winter 2000.",
+    internalUrl: "writing/the-dance-of-phantoms.html"
+  },
+   {
+    section: "poetry",
+    title: "Treestone",
+    type: "Poem",
+    publication: "Möbius: The Poetry Magazine",
+    description: "Previously published in Möbius: The Poetry Magazine — Summer 2000.",
     internalUrl: "writing/the-dance-of-phantoms.html"
   },
   {
