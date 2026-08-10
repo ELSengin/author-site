@@ -14,7 +14,7 @@ window.WRITING_ITEMS = [
     title: "The Avatar",
     type: "Poem",
     publication: "The Leading Edge, Issue 39",
-    description: "Previously published in The Leading Edge. The page is ready for the full poem text when you want to post it.",
+    description: "Previously published in The Leading Edge.",
     internalUrl: "writing/the-avatar.html"
   },
   {
