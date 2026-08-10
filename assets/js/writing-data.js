@@ -22,7 +22,7 @@ window.WRITING_ITEMS = [
     title: "The Chase",
     type: "Poem",
     publication: "Möbius: The Poetry Magazine",
-    description: "Previously published in Möbius: The Poetry Magazine.",
+    description: "Previously published in Möbius: The Poetry Magazine — 1999.",
     internalUrl: "writing/the-chase.html"
   },
   {
