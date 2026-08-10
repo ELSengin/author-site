@@ -17,7 +17,40 @@ a{color:var(--accent-dark);text-decoration-thickness:1px;text-underline-offset:3
 .prose{max-width:850px}.prose h2{margin-top:2.2em}.meta{font-family:Arial,Helvetica,sans-serif;color:var(--muted);font-size:.93rem}.status{font-family:Arial,Helvetica,sans-serif;font-weight:700;color:var(--accent-dark)}
 .pill{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);margin-bottom:10px}
 .flow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-weight:700}.flow span{background:var(--panel);border:1px solid var(--line);padding:8px 10px;border-radius:10px}.flow b{color:var(--muted)}
-.work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}.work-item h3{margin:0 0 4px}.work-item .description{margin:.65rem 0 0}.work-links{margin-top:12px;font-family:Arial,Helvetica,sans-serif;font-weight:700}
+.writing-section>summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  font-size:2.1rem;
+  font-weight:700;
+  line-height:1.2;
+  margin:0 0 18px;
+}
+
+.writing-section>summary::-webkit-details-marker{
+  display:none;
+}
+
+.writing-section>summary::after{
+  content:"▾";
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:1.1rem;
+  color:var(--accent);
+  transition:transform .2s ease;
+}
+
+.writing-section[open]>summary::after{
+  transform:rotate(180deg);
+}
+
+.writing-section>summary:hover{
+  color:var(--accent);
+}
+
+work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}.work-item h3{margin:0 0 4px}.work-item .description{margin:.65rem 0 0}.work-links{margin-top:12px;font-family:Arial,Helvetica,sans-serif;font-weight:700}
 .poem{max-width:760px;white-space:pre-wrap;font-size:1.06rem;line-height:1.7}.pub-credit{font-style:italic;color:#55514c}.notice{font-family:Arial,Helvetica,sans-serif;background:#eee8dc;border-left:4px solid var(--accent);padding:14px 16px;border-radius:6px}
 .contact-form{display:grid;gap:16px;max-width:760px}.contact-form label{font-family:Arial,Helvetica,sans-serif;font-weight:700}.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:12px 13px;margin-top:6px;border:1px solid #bfb8ad;border-radius:8px;background:#fffdf8;font:inherit}.contact-form textarea{min-height:180px;resize:vertical}
 .button{border:0;border-radius:8px;padding:12px 18px;background:var(--accent-dark);color:#fff;font-family:Arial,Helvetica,sans-serif;font-weight:700;cursor:pointer;width:max-content}
