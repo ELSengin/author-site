@@ -25,6 +25,14 @@ window.WRITING_ITEMS = [
     description: "Previously published in Möbius: The Poetry Magazine — 1999.",
     internalUrl: "writing/the-chase.html"
   },
+   {
+    section: "poetry",
+    title: "Something is Missing",
+    type: "Poem",
+    publication: "Möbius: The Poetry Magazine",
+    description: "Previously published in Möbius: The Poetry Magazine — 1998.",
+    internalUrl: "writing/something-is-missing.html"
+  },
   {
     section: "books",
     title: "My Favorite Pair of Boots",
