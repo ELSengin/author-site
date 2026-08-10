@@ -27,6 +27,14 @@ window.WRITING_ITEMS = [
   },
    {
     section: "poetry",
+    title: "Dead Center",
+    type: "Poem",
+    publication: "Möbius: The Poetry Magazine",
+    description: "Previously published in Möbius: The Poetry Magazine — 1999.",
+    internalUrl: "writing/dead-center.html"
+  },
+   {
+    section: "poetry",
     title: "Something is Missing",
     type: "Poem",
     publication: "Möbius: The Poetry Magazine",
