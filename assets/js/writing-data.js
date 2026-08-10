@@ -55,7 +55,15 @@ window.WRITING_ITEMS = [
     type: "Poem",
     publication: "Möbius: The Poetry Magazine",
     description: "Previously published in Möbius: The Poetry Magazine — Summer 2000.",
-    internalUrl: "writing/the-dance-of-phantoms.html"
+    internalUrl: "writing/treestone.html"
+  },
+   {
+    section: "poetry",
+    title: "One Choir",
+    type: "Poem",
+    publication: "Möbius: The Poetry Magazine",
+    description: "Previously published in Möbius: The Poetry Magazine — Summer 2000.",
+    internalUrl: "writing/one-choir.html"
   },
   {
     section: "books",
