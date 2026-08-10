@@ -30,7 +30,7 @@ window.WRITING_ITEMS = [
     title: "Something is Missing",
     type: "Poem",
     publication: "Möbius: The Poetry Magazine",
-    description: "Previously published in Möbius: The Poetry Magazine — 1998.",
+    description: "Previously published in Möbius: The Poetry Magazine — 2000.",
     internalUrl: "writing/something-is-missing.html"
   },
   {
