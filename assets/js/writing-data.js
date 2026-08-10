@@ -30,7 +30,7 @@ window.WRITING_ITEMS = [
     title: "My Favorite Pair of Boots",
     type: "Poetry Collection",
     status: "Seeking publication",
-    description: "A collection of poems exploring what it means to live with a heightened state of awareness—where it comes from, how it develops, and how it becomes integrated into a life. Through experiences on a working farm, in military service, ironwork, engineering, and family, the poems examine the usefulness of vigilance and readiness, the costs they carry, and what happens when traits shaped by necessity become part of who you are."
+    description: "A collection of poems tracing how experience shapes character over the course of a life. Through farm life, military service, ironwork, engineering, family, and reflection, the poems follow the lessons, responsibilities, and instincts that develop along the way—how they are tested, what they cost, and how the ways we adapt become part of who we are.",
   },
   {
     section: "books",
