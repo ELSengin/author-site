@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Something is Missing | Erick L. Sokn</title>
+<meta name="description" content="Erick L. Sokn — engineering consulting, engineering education, and writing.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<header class="site-header"><div class="site-shell header-inner">
+<a class="brand" href="../index.html"><span class="brand-name">Erick L. Sokn</span><span class="brand-sub">Engineering Consultant | Author</span></a>
+<nav class="main-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../engineering.html">Engineering</a><a href="../education.html">Engineering Education</a><a href="../writing.html" aria-current="page">Writing</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
+</div></header>
+<main>
+<section class="page-head"><div class="site-shell"><div class="eyebrow">Poetry</div><h1>The Chase</h1><p class="pub-credit">Originally published in <em>Möbius: The Poetry Magazine — 1998</em>.</p></div></section>
+<section class="section compact"><div class="site-shell"><div class="poem">He can feel…
+but not identify the absence,
+a ghost
+that haunts the shadows of his thoughts;
+it’s there
+when looked at indirectly,
+so slippery 
+when grasped it can’t be caught.
+ 
+He remembers friends…
+not just more friendly faces.
+From days when…
+there was more to lose than gain.
+Perhaps it was…
+their youth and lack of wisdom
+that let them care
+and trust more than is sane.
+ 
+Perhaps…
+it was the risk that drove them closer,
+the struggles…
+or the hardships that they shared;
+the chips collapsed…
+but they stood by each other,
+a thing
+that in the business world is rare.
+ 
+Friend
+is not a term he uses lightly,
+not with
+the standard that was set before;
+acquaintances
+are what his world now offers,
+but in him
+something whispers, “There was more….”
+</div></div></section>
+</main>
+<footer class="site-footer"><div class="site-shell footer-inner"><span>Erick L. Sokn</span><span>Engineering Consulting · Engineering Education · Writing</span></div></footer>
+<script src="../assets/js/site.js"></script>
+</body></html>
