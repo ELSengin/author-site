@@ -42,6 +42,14 @@ window.WRITING_ITEMS = [
     internalUrl: "writing/something-is-missing.html"
   },
   {
+    section: "poetry",
+    title: "The Dance of Phantoms",
+    type: "Poem",
+    publication: "Möbius: The Poetry Magazine",
+    description: "Previously published in Möbius: The Poetry Magazine — 2000.",
+    internalUrl: "writing/the-dance-of-phantoms.html"
+  },
+  {
     section: "books",
     title: "My Favorite Pair of Boots",
     type: "Poetry Collection",
