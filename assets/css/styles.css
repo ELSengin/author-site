@@ -17,6 +17,9 @@ a{color:var(--accent-dark);text-decoration-thickness:1px;text-underline-offset:3
 .prose{max-width:850px}.prose h2{margin-top:2.2em}.meta{font-family:Arial,Helvetica,sans-serif;color:var(--muted);font-size:.93rem}.status{font-family:Arial,Helvetica,sans-serif;font-weight:700;color:var(--accent-dark)}
 .pill{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);margin-bottom:10px}
 .flow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-weight:700}.flow span{background:var(--panel);border:1px solid var(--line);padding:8px 10px;border-radius:10px}.flow b{color:var(--muted)}
+.poem-section{
+  padding-top:18px;
+}
 .writing-section>summary{
   list-style:none;
   cursor:pointer;
