@@ -4,19 +4,26 @@ UPLOAD
 Upload the entire contents of this folder to the root of your GitHub Pages repository.
 
 MAIN PAGES
-index.html                 Home
-engineering.html           Engineering Consulting
-education.html             Engineering Education
-writing.html               Writing index
-about.html                 About
-contact.html               Contact
+index.html                  Home
+engineering.html            Engineering Consulting
+education.html              Engineering Education
+writing.html                Writing index
+about.html                  About
+contact.html                Contact
 
 FOLDERS
-assets/css/styles.css      Site appearance
-assets/js/writing-data.js  Writing index data
-assets/js/writing.js       Builds the Writing index automatically
-education/                 Individual course pages
-writing/                   Individual poem pages and poem template
+assets/css/styles.css       Site appearance
+assets/js/writing-data.js   Writing index data
+assets/js/writing.js        Builds the Writing index automatically
+education/                  Individual course pages and Must Know overview
+writing/                    Individual poem pages and poem template
+
+ENGINEERING EDUCATION
+The Engineering Education page provides access to the six-course Engineering
+Product Development Curriculum and the focused Must Know overview.
+
+Individual course pages contain course descriptions, core topics, and expandable
+detailed course outlines.
 
 ADDING A NEW POEM OR LITERARY ITEM
 1. Copy writing/poem-template.html and rename it, for example writing/dead-center.html.
@@ -43,10 +50,6 @@ the form action in contact.html needs to change.
 COPYRIGHT
 No site-wide copyright warning is included, by design.
 Previously published work can be credited on its individual page.
-
-THE AVATAR
-The page is created but contains a placeholder because the full poem text was not
-included in this build.
 
 WRITING INDEX
 The Writing index is data-driven so future additions are easy.
