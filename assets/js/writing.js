@@ -45,6 +45,11 @@ function renderItems(section, targetId) {
       article.appendChild(links);
     }
 
+    if (item.note) {
+  const note = document.createElement("p");
+  note.textContent = item.note;
+  article.appendChild(note);
+}
     target.appendChild(article);
   });
 }
