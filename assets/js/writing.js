@@ -45,14 +45,25 @@ function renderItems(section, targetId) {
       article.appendChild(links);
     }
 
-   if (item.note) {
+ if (item.note) {
   const note = document.createElement("p");
 
   const strong = document.createElement("strong");
   strong.textContent = "An unexpected connection: ";
   note.appendChild(strong);
 
-  note.appendChild(document.createTextNode(item.note));
+  const parts = item.note.split("The Avatar");
+
+  note.appendChild(document.createTextNode(parts[0]));
+
+  const link = document.createElement("a");
+  link.href = "writing/the-avatar.html";
+  link.textContent = "The Avatar";
+  link.style.fontStyle = "italic";
+  note.appendChild(link);
+
+  note.appendChild(document.createTextNode(parts[1]));
+
   article.appendChild(note);
 }
     
