@@ -9,6 +9,8 @@ window.WRITING_ITEMS = [
     externalUrl: "https://www.wrath-bearingtree.com/2026/07/05/new-nonfiction-by-erick-l-sokn-you-can-never-know-for-sure/",
     externalLabel: "Read at Wrath-Bearing Tree →",
     note: "After this essay appeared, fantasy author Elle Doyenne recognized my name from The Avatar, a poem she had encountered while she was in school. Her note led to an unexpected correspondence more than twenty-five years later."
+    noteLabel: "An unexpected connection:",
+    noteLinkText: "The Avatar"
   },
   {
     section: "poetry",
