@@ -64,6 +64,13 @@ function renderItems(section, targetId) {
 
   note.appendChild(document.createTextNode(parts[1]));
 
+   const storyLink = document.createElement("a");
+  storyLink.href = "writing/the-avatar.html";
+  storyLink.textContent = "Read the story →";
+  storyLink.style.display = "block";
+  storyLink.style.marginTop = "8px";
+  note.appendChild(storyLink);
+   
   article.appendChild(note);
 }
     
