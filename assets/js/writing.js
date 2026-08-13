@@ -45,32 +45,6 @@ function renderItems(section, targetId) {
       article.appendChild(links);
     }
 
-      if (item.note) {
-  const note = document.createElement("p");
-  note.className = "description";
-
-  if (item.noteLabel) {
-    const strong = document.createElement("strong");
-    strong.textContent = item.noteLabel + " ";
-    note.appendChild(strong);
-  }
-
-  note.appendChild(document.createTextNode(item.note));
-  article.appendChild(note);
-
-  if (item.noteUrl) {
-    const noteLinks = document.createElement("div");
-    noteLinks.className = "work-links";
-
-    const noteLink = document.createElement("a");
-    noteLink.href = item.noteUrl;
-    noteLink.textContent = item.noteUrlLabel || "Read more →";
-
-    noteLinks.appendChild(noteLink);
-    article.appendChild(noteLinks);
-  }
-}
-    
     target.appendChild(article);
   });
 }
