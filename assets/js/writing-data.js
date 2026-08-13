@@ -14,7 +14,7 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "The Avatar",
     type: "Poem",
-    publication: "Previously published in The Leading Edge, Issue 39",
+    publication: "Previously published in The Leading Edge, Issue 39 — 2000",
     internalUrl: "writing/the-avatar.html"
   },
   {
