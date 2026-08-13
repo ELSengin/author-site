@@ -8,7 +8,7 @@ window.WRITING_ITEMS = [
     description: "Drawn from several sections of Your Word Is Your Worth, this essay begins with a split-second decision made as a young military policeman and follows the lesson from that moment into my engineering career. It examines judgment under uncertainty—what happens when the evidence points one way, instinct says another, and a decision still has to be made.",
     externalUrl: "https://www.wrath-bearingtree.com/2026/07/05/new-nonfiction-by-erick-l-sokn-you-can-never-know-for-sure/",
     externalLabel: "Read at Wrath-Bearing Tree →",
-    note: "note: "After this essay appeared, fantasy author Elle Doyenne recognized my name from The Avatar, a poem she had encountered while in school at age 11. More than twenty-five years later, her note led to an unexpected correspondence and my discovery of the writer she had become. Read the story →""
+    note: "note: "After this essay appeared, fantasy author Elle Doyenne recognized my name from The Avatar, a poem she had encountered while in school at age 11. More than twenty-five years later, her note led to an unexpected correspondence and my discovery of the writer she had become. Read the story →"
   },
   {
     section: "poetry",
