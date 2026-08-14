@@ -63,7 +63,7 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "This Christmas Do Some Remembering",
     type: "Poem",
-    publication: "Tapatalk",
+    publication: "Tapatalk — 2010",
     description: "A Christmas poem about remembrance, service, and those who remain watchful while others celebrate in safety.",
     status: "Recipient of the Profound Wisdom Award and Poetic Moods Must Read Award.",
     externalUrl: "https://www.tapatalk.com/groups/thefiveanddime91705/this-christmas-do-some-remembering-double-awarded--t8210.html",
