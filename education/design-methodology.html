@@ -15,7 +15,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Engineering Design Methodology | Erick L. Sokn</title>
-<meta name="description" content="Engineering Design Methodology course overview covering needs, requirements, functional design, concept development, reliability, verification, and design iteration.">
+<meta name="description" content="Engineering Design Methodology course overview covering functional decomposition, concept development, concept evaluation, design for manufacturability, systems thinking, reliability, verification, and design iteration.">
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
@@ -53,18 +53,20 @@
     <div class="prose">
 
       <p>
-        This course begins with the need rather than the solution. It develops a systematic approach to requirements, concept generation, functional breakdown, systems thinking, engineering analysis, reliability, verification planning, and design optimization.
+        Beginning with defined product requirements, this course develops a systematic engineering approach from functional decomposition and concept generation through analysis, reliability, verification, and design refinement.
       </p>
 
       <h2>Core Topics</h2>
 
       <ul>
-        <li>Customer needs and product requirements</li>
-        <li>Functional decomposition</li>
-        <li>Concept development and selection</li>
-        <li>Engineering fundamentals and physics of failure</li>
-        <li>Design for reliability and manufacturability</li>
-        <li>Verification planning and design iteration</li>
+        <li>Structured product development process</li>
+        <li>Functional decomposition and concept generation</li>
+        <li>Cross-discipline concept review</li>
+        <li>Concept evaluation and Pugh Matrix selection</li>
+        <li>Design for manufacturability and assembly</li>
+        <li>Systems thinking and engineering interdependencies</li>
+        <li>Failure mechanisms and physics of failure</li>
+        <li>DFMEA, verification planning, and design iteration</li>
       </ul>
 
       <details class="writing-section">
@@ -73,28 +75,14 @@
         <ol>
 
           <li>
-            <strong>Defining the Basic Statement of Need</strong>
-            <ul>
-              <li>Starting with customer verbatims</li>
-              <li>Identifying what the customer is actually trying to accomplish</li>
-              <li>Separating the underlying need from suggested or assumed solutions</li>
-              <li>Consolidating multiple customer statements into a basic statement of need</li>
-              <li>Identifying customer expectations and critical product needs</li>
-              <li>Translating the basic need into product requirements</li>
-              <li>Defining performance expectations</li>
-              <li>Identifying operating and environmental conditions</li>
-              <li>Establishing measurable requirements and design targets</li>
-            </ul>
-          </li>
-
-          <li>
             <strong>Understanding the Structured Product Development Process</strong>
             <ul>
-              <li>Relationship between need, requirements, concepts, analysis, verification, and refinement</li>
+              <li>Relationship between requirements, functions, concepts, analysis, verification, and refinement</li>
               <li>Why design activities are linked rather than independent steps</li>
-              <li>Moving from broad product need toward increasingly detailed design decisions</li>
+              <li>Moving from defined product requirements toward increasingly detailed design decisions</li>
               <li>Using iteration as a normal part of product development</li>
               <li>Identifying problems early, when design changes are easier and less costly</li>
+              <li>Maintaining traceability back to the PRD throughout development</li>
             </ul>
           </li>
 
@@ -126,17 +114,36 @@
           </li>
 
           <li>
+            <strong>Cross-Discipline Concept Input and Review</strong>
+            <ul>
+              <li>Obtaining early input from appropriate stakeholders and disciplines</li>
+              <li>Reviewing individual concepts informally as they develop</li>
+              <li>Identifying what works well from each discipline's perspective</li>
+              <li>Identifying drawbacks and concerns</li>
+              <li>Soliciting suggestions that improve manufacturability, assembly, tooling, quality, service, cost, purchasing, or other stakeholder needs</li>
+              <li>Capturing stakeholder preferences and the reasons behind them</li>
+              <li>Challenging assumptions before substantial development effort is invested</li>
+              <li>Using individual discussions as well as formal cross-functional team reviews</li>
+              <li>Incorporating stakeholder input into concept refinement and evaluation</li>
+            </ul>
+          </li>
+
+          <li>
             <strong>Concept Evaluation and Selection</strong>
             <ul>
               <li>Establishing criteria for comparing competing concepts</li>
               <li>Design and performance considerations</li>
               <li>Manufacturing considerations</li>
               <li>Project, cost, schedule, and development-risk considerations</li>
-              <li>Using a baseline or existing design for comparison</li>
+              <li>Incorporating customer needs and CTQs from the PRD</li>
+              <li>Using a baseline or existing design for comparison where appropriate</li>
               <li>Pugh Matrix concept evaluation</li>
               <li>Identifying strengths and weaknesses of competing concepts</li>
+              <li>Incorporating cross-discipline input into concept evaluation</li>
               <li>Combining desirable elements from multiple concepts</li>
               <li>Refining and reevaluating promising concepts</li>
+              <li>Carrying multiple concepts forward when uncertainty warrants parallel development</li>
+              <li>Maintaining a fallback design path when appropriate</li>
             </ul>
           </li>
 
@@ -154,6 +161,7 @@
               <li>Reducing unnecessary assembly operations</li>
               <li>Providing access and orientation for assembly</li>
               <li>Using self-locating and mistake-proofing features</li>
+              <li>Obtaining manufacturing input during design and prototype assembly</li>
             </ul>
           </li>
 
@@ -234,7 +242,7 @@
           <li>
             <strong>Verification Planning</strong>
             <ul>
-              <li>Connecting product requirements to verification activities</li>
+              <li>Connecting PRD requirements to verification activities</li>
               <li>Distinguishing verification from validation</li>
               <li>Functional testing</li>
               <li>Mechanical stress testing</li>
@@ -244,32 +252,36 @@
               <li>Developing test conditions from identified operating stresses</li>
               <li>Designing tests to activate the same failure mechanisms expected in actual service</li>
               <li>Using testing to confirm engineering assumptions and analytical predictions</li>
+              <li>Developing fixtures or component-level tests where they can produce useful results earlier or faster than complete-product testing</li>
             </ul>
           </li>
 
           <li>
             <strong>Test Results, Failure Analysis, and Design Iteration</strong>
             <ul>
-              <li>Evaluating verification results against product requirements</li>
+              <li>Evaluating verification results against PRD requirements</li>
               <li>Investigating failures discovered during testing</li>
               <li>Determining whether observed failures match predicted mechanisms</li>
               <li>Identifying weaknesses revealed through testing and analysis</li>
               <li>Modifying geometry, materials, tolerances, or mechanisms as required</li>
               <li>Repeating analysis and verification after design changes</li>
               <li>Using repeated design-test-refine cycles to improve performance and reliability</li>
+              <li>Recognizing when a failure requires a structured problem-solving effort</li>
             </ul>
           </li>
 
           <li>
             <strong>Integrating the Complete Design Methodology</strong>
             <ul>
-              <li>Maintaining traceability from customer need through product requirements</li>
+              <li>Maintaining traceability from PRD requirements through the evolving design</li>
+              <li>Connecting requirements to functions</li>
               <li>Connecting functions to concepts and component designs</li>
               <li>Connecting component interactions to stresses</li>
               <li>Connecting stresses to failure mechanisms</li>
               <li>Connecting predicted failure mechanisms to verification methods</li>
+              <li>Using cross-discipline input throughout development</li>
               <li>Using analysis, testing, and iteration as an integrated development process</li>
-              <li>Balancing function, reliability, manufacturability, cost, and project constraints throughout development</li>
+              <li>Balancing function, reliability, manufacturability, cost, schedule, and project constraints throughout development</li>
             </ul>
           </li>
 
