@@ -33,17 +33,17 @@ window.WRITING_ITEMS = [
   },
    {
     section: "poetry",
-    title: "Something is Missing",
-    type: "Poem",
-    publication: "Previously published in Möbius: The Poetry Magazine — Spring 2000",
-    internalUrl: "writing/something-is-missing.html"
-  },
-  {
-    section: "poetry",
     title: "The Dance of Phantoms",
     type: "Poem",
     publication: "Previously published in Möbius: The Poetry Magazine — Fall 1999",
     internalUrl: "writing/the-dance-of-phantoms.html"
+  },
+   {
+    section: "poetry",
+    title: "Something is Missing",
+    type: "Poem",
+    publication: "Previously published in Möbius: The Poetry Magazine — Spring 2000",
+    internalUrl: "writing/something-is-missing.html"
   },
    {
     section: "poetry",
