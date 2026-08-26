@@ -28,7 +28,7 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "Dead Center",
     type: "Poem",
-    publication: "Previously published in Möbius: The Poetry Magazine — 1999",
+    publication: "accepted for publication by Mobius, the Poetry Magazine — 1999; publication status unconfirmed",
     internalUrl: "writing/dead-center.html"
   },
    {
@@ -49,14 +49,14 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "Treestone",
     type: "Poem",
-    publication: "Previously published in Möbius: The Poetry Magazine — Summer 2000",
+   
     internalUrl: "writing/treestone.html"
   },
    {
     section: "poetry",
     title: "One Choir",
     type: "Poem",
-    publication: "Previously published in Möbius: The Poetry Magazine — Summer 2000",
+    
     internalUrl: "writing/one-choir.html"
   },
   {
