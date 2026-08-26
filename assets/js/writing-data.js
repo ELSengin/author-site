@@ -21,14 +21,14 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "The Chase",
     type: "Poem",
-    publication: "Previously published in Möbius: The Poetry Magazine — 1999.",
+    publication: "Previously published in Möbius: The Poetry Magazine — Spring 1999.",
     internalUrl: "writing/the-chase.html"
   },
    {
     section: "poetry",
     title: "Dead Center",
     type: "Poem",
-    publication: "Originally published in Möbius: The Poetry Magazine — 1999",
+    publication: "Originally published in Möbius: The Poetry Magazine — Spring 1999",
     internalUrl: "writing/dead-center.html"
   },
    {
@@ -42,7 +42,7 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "The Dance of Phantoms",
     type: "Poem",
-    publication: "Previously published in Möbius: The Poetry Magazine — Winter 2000",
+    publication: "Previously published in Möbius: The Poetry Magazine — Fall 1999",
     internalUrl: "writing/the-dance-of-phantoms.html"
   },
    {
