@@ -28,7 +28,7 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "Dead Center",
     type: "Poem",
-    publication: "accepted for publication by Mobius, the Poetry Magazine — 1999; publication status unconfirmed",
+    publication: "Originally published in Möbius: The Poetry Magazine — 1999",
     internalUrl: "writing/dead-center.html"
   },
    {
