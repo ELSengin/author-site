@@ -96,3 +96,170 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
     max-width: 240px;
   }
 }
+
+/* Synergy Molding Technologies branding and engineering-system visuals */
+.home-synergy-logo{
+  display:block;
+  width:100%;
+  max-width:310px;
+  height:auto;
+  margin:2px 0 18px;
+}
+.home-perspectives{
+  padding-top:44px;
+  padding-bottom:52px;
+  border-top:1px solid var(--line);
+}
+.perspective-grid article{
+  padding:6px 24px 6px 0;
+}
+.perspective-grid article+article{
+  border-left:1px solid var(--line);
+  padding-left:34px;
+}
+.perspective-grid h2{
+  margin:.25rem 0 .65rem;
+  font-size:1.55rem;
+}
+
+.engineering-brand-section{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#f8f5ee;
+}
+.engineering-brand-grid{
+  display:grid;
+  grid-template-columns:minmax(320px, .9fr) minmax(420px, 1.35fr);
+  gap:54px;
+  align-items:center;
+}
+.engineering-logo{
+  display:block;
+  width:100%;
+  max-width:460px;
+  height:auto;
+}
+.company-note{
+  max-width:460px;
+  margin:.7rem 0 0;
+}
+.engineering-system-copy h2{
+  margin-top:0;
+  font-size:1.85rem;
+}
+.engineering-system-copy>p{
+  max-width:690px;
+}
+.discipline-strip{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+  margin-top:24px;
+}
+.discipline{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:66px;
+  padding:12px 8px;
+  border-radius:12px;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  font-weight:700;
+  text-align:center;
+  box-shadow:0 5px 14px rgba(35,31,27,.08);
+}
+.discipline.design{background:#4b873e}
+.discipline.material{background:#858585}
+.discipline.tooling{background:#d96f0b}
+.discipline.equipment{background:#183b5b}
+.discipline.process{background:#286ca6}
+
+/* Eight-module curriculum graphic */
+.curriculum-map{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;
+  gap:12px;
+  align-items:center;
+  width:min(1080px,100%);
+}
+.module-node{
+  min-height:122px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  text-align:center;
+  padding:15px 12px;
+  border:1px solid var(--line);
+  border-top:5px solid var(--node-color,#3c5361);
+  border-radius:14px;
+  background:var(--panel);
+  color:var(--ink);
+  text-decoration:none;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.25;
+  box-shadow:0 7px 20px rgba(48,42,34,.045);
+}
+.module-node:hover{
+  color:var(--ink);
+  transform:translateY(-1px);
+  box-shadow:0 9px 24px rgba(48,42,34,.08);
+}
+.module-number{
+  width:30px;
+  height:30px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:var(--node-color,#3c5361);
+  color:#fff;
+  font-weight:700;
+}
+.module-green{--node-color:#4b873e}
+.module-blue{--node-color:#286ca6}
+.module-orange{--node-color:#d96f0b}
+.module-purple{--node-color:#725790}
+.module-gray{--node-color:#7c7c7c}
+.module-brown{--node-color:#a56a33}
+.module-navy{--node-color:#183b5b}
+.module-cyan{--node-color:#2a83a8}
+.module-arrow{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--muted);
+  font-size:1.6rem;
+  font-weight:700;
+}
+.module-break{display:none}
+.production-endpoint{
+  grid-column:1/-1;
+  justify-self:center;
+  margin-top:4px;
+  padding:10px 18px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#eee8dc;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#3e3b36;
+}
+
+@media(max-width:900px){
+  .perspective-grid article+article{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:28px}
+  .engineering-brand-grid{grid-template-columns:1fr;gap:28px}
+  .engineering-logo{max-width:520px}
+  .discipline-strip{grid-template-columns:repeat(2,1fr)}
+  .discipline-strip .process{grid-column:1/-1}
+  .curriculum-map{grid-template-columns:1fr 1fr;gap:12px}
+  .module-arrow,.module-break{display:none}
+  .production-endpoint{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .home-synergy-logo{max-width:270px}
+  .discipline-strip{grid-template-columns:1fr}
+  .discipline-strip .process{grid-column:auto}
+  .curriculum-map{grid-template-columns:1fr}
+  .production-endpoint{grid-column:1}
+}
