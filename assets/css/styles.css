@@ -387,8 +387,8 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
 }
 
 /* Synergistic Engineering Design 8-module wheel */
-.methodology-graphic img {
-  width: 50%;
+.methodology-graphic {
+  width: 70%;
   max-width: 525px;
   height: auto;
   display: block;
