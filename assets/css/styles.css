@@ -385,3 +385,13 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
 @media(max-width:430px){
   .mini-curriculum{grid-template-columns:1fr}
 }
+
+/* Synergistic Engineering Design 8-module wheel */
+.methodology-graphic img {
+  width: 70%;
+  max-width: 525px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
