@@ -264,6 +264,22 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   .production-endpoint{grid-column:1}
 }
 
+
+/* Locked Synergy / Synergistic Engineering Design identity graphics */
+.home-education-logo{
+  display:block;
+  width:100%;
+  max-width:300px;
+  height:auto;
+  margin:12px 0 18px;
+}
+.methodology-graphic{
+  display:block;
+  width:min(860px,100%);
+  height:auto;
+  margin:30px auto 28px;
+}
+
 /* Education identity and corrected eight-module flow */
 .education-brand-band,
 .module-brand-band{
@@ -282,8 +298,8 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
 .module-brand-band img{
   display:block;
   flex:0 0 auto;
-  width:290px;
-  max-width:38%;
+  width:310px;
+  max-width:40%;
   height:auto;
   margin:0;
 }
@@ -355,7 +371,7 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   .education-brand-band,
   .module-brand-band{gap:20px}
   .education-brand-band img,
-  .module-brand-band img{width:250px;max-width:42%}
+  .module-brand-band img{width:280px;max-width:44%}
   .mini-curriculum{grid-template-columns:repeat(4,1fr)}
 }
 @media(max-width:650px){
