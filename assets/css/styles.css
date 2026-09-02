@@ -394,7 +394,7 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   max-width:165px;
   height:auto;
   margin:2px auto 18px;
-  transform:translateX(-18px);
+  transform:translateX(-32px);
 }
 @media(max-width:560px){
   .home-writing-wheel{
