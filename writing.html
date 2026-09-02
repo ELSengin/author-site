@@ -17,6 +17,84 @@
 <title>Writing | Erick L. Sokn</title>
 <meta name="description" content="Erick L. Sokn — engineering consulting, engineering education, and writing.">
 <link rel="stylesheet" href="assets/css/styles.css">
+
+<style>
+/* Writing page — simplified LIFE wheel and readable definitions */
+.writing-life-wheel-section{
+  padding-top:10px;
+  padding-bottom:36px;
+}
+.writing-life-wheel-main{
+  display:block;
+  width:100%;
+  max-width:520px;
+  height:auto;
+  margin-left:170px;
+  margin-right:auto;
+  margin-bottom:28px;
+}
+.life-dimensions{
+  width:min(900px,100%);
+  margin-left:58px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  column-gap:58px;
+  row-gap:20px;
+}
+.life-dimension{
+  display:grid;
+  grid-template-columns:76px 1fr;
+  gap:14px;
+  align-items:start;
+}
+.life-dimension .life-icon{
+  width:68px;
+  height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.life-dimension svg{
+  display:block;
+  width:100%;
+  height:100%;
+}
+.life-dimension h3{
+  margin:0 0 3px;
+  font-size:1.18rem;
+}
+.life-dimension p{
+  margin:0;
+  line-height:1.42;
+}
+.life-dimension.living{color:#0d3768}
+.life-dimension.loving{color:#c84e00}
+.life-dimension.learning{color:#08778b}
+.life-dimension.integration{color:#4a2b78}
+.life-dimension.extrapolation{color:#287321}
+.life-dimension p{color:var(--ink)}
+
+@media(max-width:900px){
+  .writing-life-wheel-main{
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .life-dimensions{
+    width:min(760px,100%);
+    margin-left:auto;
+    margin-right:auto;
+    column-gap:34px;
+  }
+}
+@media(max-width:650px){
+  .writing-life-wheel-main{max-width:92vw}
+  .life-dimensions{grid-template-columns:1fr;row-gap:18px}
+  .life-dimension{grid-template-columns:62px 1fr;gap:12px}
+  .life-dimension .life-icon{width:56px;height:50px}
+}
+</style>
+
 </head>
 <body>
 <header class="site-header"><div class="site-shell header-inner">
@@ -35,8 +113,61 @@
 <section class="section writing-life-wheel-section">
   <div class="site-shell">
     <img class="writing-life-wheel-main"
-         src="assets/images/writing-life-wheel-main.png"
+         src="assets/images/writing-life-wheel-simplified.png"
          alt="Life writing wheel — Living, Loving, Learning, Integration, Extrapolation">
+
+    <div class="life-dimensions" aria-label="Writing perspective">
+      <article class="life-dimension living">
+        <div class="life-icon" aria-hidden="true">
+          <svg viewBox="0 0 72 58">
+            <path d="M5 37 L22 19 L32 29 L42 14 L66 37" fill="none" stroke="currentColor" stroke-width="3"/>
+            <path d="M27 44 C35 39 43 41 50 44 C43 47 37 49 31 51" fill="none" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <div><h3>Living</h3><p>Experiencing life through work, service, adventure, challenge, and everyday moments.</p></div>
+      </article>
+
+      <article class="life-dimension loving">
+        <div class="life-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 58">
+            <path d="M32 51 C27 45 8 34 8 19 C8 9 21 5 32 17 C43 5 56 9 56 19 C56 34 37 45 32 51 Z"
+                  fill="none" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <div><h3>Loving</h3><p>The people, relationships, and connections that give life meaning and purpose.</p></div>
+      </article>
+
+      <article class="life-dimension learning">
+        <div class="life-icon" aria-hidden="true">
+          <svg viewBox="0 0 72 58">
+            <path d="M35 14 C25 8 14 8 7 12 V47 C16 43 25 44 35 49 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+            <path d="M37 14 C47 8 58 8 65 12 V47 C56 43 47 44 37 49 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <div><h3>Learning</h3><p>Discovering truth and understanding through experience, curiosity, and reflection.</p></div>
+      </article>
+
+      <article class="life-dimension integration">
+        <div class="life-icon" aria-hidden="true">
+          <svg viewBox="0 0 70 58">
+            <path d="M8 11 H28 V20 C28 25 36 25 36 20 V11 H57 V30 H49 C43 30 43 38 49 38 H57 V49 H36 V42 C36 36 28 36 28 42 V49 H8 V30 H17 C23 30 23 22 17 22 H8 Z"
+                  fill="none" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <div><h3>Integration</h3><p>Bringing experiences, lessons, and perspectives together into a coherent understanding of self, others, and the world.</p></div>
+      </article>
+
+      <article class="life-dimension extrapolation">
+        <div class="life-icon" aria-hidden="true">
+          <svg viewBox="0 0 70 62">
+            <path d="M30 6 L35 25 L49 12 L42 29 L63 26 L45 36 L59 48 L40 42 L36 59 L31 41 L17 54 L24 37 L5 39 L22 30 L10 18 L29 24 Z"
+                  fill="none" stroke="currentColor" stroke-width="2.7"/>
+            <path d="M39 28 L58 10 M50 10 H58 V18" fill="none" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <div><h3>Extrapolation</h3><p>Extending understanding beyond the known—imagining possibilities, drawing insights forward, and creating stories that explore what might be.</p></div>
+      </article>
+    </div>
   </div>
 </section>
 
