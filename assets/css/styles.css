@@ -405,20 +405,4 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   }
 }
 
-
-  /* Full LIFE wheel on the main Writing page */
-  .writing-life-wheel-section{
-    padding-top:12px;
-    padding-bottom:34px;
-  }
-  
-   .writing-life-wheel-main{
-    display:block;
-    width:100%;
-    max-width:380px;
-    height:auto;
-    margin-left:140px;
-    margin-right:auto;
-    transform:none;
-  }
 }
