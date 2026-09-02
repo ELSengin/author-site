@@ -415,9 +415,9 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   .writing-life-wheel-main{
     display:block;
     width:100%;
-    max-width:575px;
+    max-width:520px;
     height:auto;
     margin:0 auto;
-    transform:translateX(-15px);
+    transform:translateX(-55px);
   }
 }
