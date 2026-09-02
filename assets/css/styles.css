@@ -412,12 +412,13 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
     padding-bottom:34px;
   }
   
-  .writing-life-wheel-main{
+   .writing-life-wheel-main{
     display:block;
     width:100%;
     max-width:520px;
     height:auto;
-    margin:0 auto;
-    transform:translateX(-55px);
+    margin-left:140px;
+    margin-right:auto;
+    transform:none;
   }
 }
