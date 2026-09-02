@@ -403,3 +403,26 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
     transform:translateX(-10px);
   }
 }
+
+
+/* Full LIFE wheel on the main Writing page */
+.writing-life-wheel-section{
+  padding-top:32px;
+  padding-bottom:42px;
+}
+.writing-life-wheel-main{
+  display:block;
+  width:100%;
+  max-width:640px;
+  height:auto;
+  margin:0 auto;
+}
+@media(max-width:700px){
+  .writing-life-wheel-section{
+    padding-top:24px;
+    padding-bottom:32px;
+  }
+  .writing-life-wheel-main{
+    max-width:92vw;
+  }
+}
