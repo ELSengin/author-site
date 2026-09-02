@@ -100,10 +100,10 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
 /* Synergy Molding Technologies branding and engineering-system visuals */
 .home-synergy-logo{
   display:block;
-  width:100%;
-  max-width:310px;
+  width:82%;
+  max-width:254px; /* 82% of the previous 310px maximum */
   height:auto;
-  margin:2px 0 18px;
+  margin:2px auto 18px;
 }
 .home-perspectives{
   padding-top:44px;
@@ -257,7 +257,7 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   .production-endpoint{grid-column:1/-1}
 }
 @media(max-width:560px){
-  .home-synergy-logo{max-width:270px}
+  .home-synergy-logo{width:82%;max-width:221px}
   .discipline-strip{grid-template-columns:1fr}
   .discipline-strip .process{grid-column:auto}
   .curriculum-map{grid-template-columns:1fr}
@@ -386,12 +386,18 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   .mini-curriculum{grid-template-columns:1fr}
 }
 
-/* Synergistic Engineering Design 8-module wheel */
-.methodology-graphic {
-  width: 50%;
-  max-width: 525px;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+/* Home-page Writing / LIFE wheel */
+.home-writing-wheel{
+  display:block;
+  width:48%;
+  max-width:165px;
+  height:auto;
+  margin:8px auto 18px;
+}
+@media(max-width:560px){
+  .home-writing-wheel{
+    width:46%;
+    max-width:155px;
+  }
 }
