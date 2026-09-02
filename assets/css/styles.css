@@ -271,7 +271,7 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   width:100%;
   max-width:300px;
   height:auto;
-  margin:12px 0 18px;
+  margin:2px 0 18px;
 }
 .methodology-graphic{
   display:block;
@@ -393,11 +393,13 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   width:48%;
   max-width:165px;
   height:auto;
-  margin:8px auto 18px;
+  margin:2px auto 18px;
+  transform:translateX(-18px);
 }
 @media(max-width:560px){
   .home-writing-wheel{
     width:46%;
     max-width:155px;
+    transform:translateX(-10px);
   }
 }
