@@ -279,6 +279,7 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   max-width:430px;
   height:auto;
   margin:30px auto 28px;
+  transform:translateX(-40px);
 }
 
 /* Education identity and corrected eight-module flow */
