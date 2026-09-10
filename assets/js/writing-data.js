@@ -63,7 +63,7 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "Witches Brew",
     type: "Poem",
-    publication: "Independently published as an illustrated children's book for Halloween, 2026",
+    publication: "Published as an illustrated children's book, 2026.",
     internalUrl: "writing/witches-brew.html"
   },
   {
