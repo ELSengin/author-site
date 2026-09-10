@@ -61,16 +61,34 @@ window.WRITING_ITEMS = [
   },
   {
     section: "books",
+    title: "Witches Brew",
+    type: "Illustrated Children's Book",
+    status: "Independently published, 2026",
+    description: "On Halloween night, three witches are making Witches Brew. Goblins are playing, trolls are gathering, and the Dragon Queen has been sent to find one last thing the party needs—a boy named Roy. Roy isn't easily frightened, and before the night is over, he discovers that things aren't always what they first appear to be.",
+    image: "assets/images/witches-brew-cover.png",
+    imageAlt: "Cover of Witches Brew by Erick L. Sokn",
+    externalUrl: "https://www.amazon.com/s?k=%22Witches+Brew%22+%22Erick+L.+Sokn%22",
+    externalLabel: "View on Amazon →"
+  },
+  {
+    section: "books",
     title: "My Favorite Pair of Boots",
     type: "Poetry Collection",
     status: "Seeking publication",
     description: "A collection of poems tracing how experience shapes character over the course of a life. Through farm life, military service, ironwork, engineering, family, and reflection, the poems follow the lessons, responsibilities, and instincts that develop along the way—how they are tested, what they cost, and how the ways we adapt become part of who we are.",
+    image: "assets/images/my-favorite-pair-of-boots.png",
+    imageAlt: "Pen-and-ink illustration of worn work boots",
+    sampleText: "Samples available on request"
   },
   {
     section: "books",
     title: "Your Word Is Your Worth",
     type: "Nonfiction Book",
     status: "Seeking publication",
-    description: "What began as a request from my daughter to write down the stories I had told over the years became an examination of the experiences, people, and decisions that shaped how I think and how I try to live. From farm life and military service through ironwork, engineering, family, loss, and reflection, the book follows those experiences and what I learned from the people and events along the way."
+    description: "What began as a request from my daughter to write down the stories I had told over the years became an examination of the experiences, people, and decisions that shaped how I think and how I try to live. From farm life and military service through ironwork, engineering, family, loss, and reflection, the book follows those experiences and what I learned from the people and events along the way.",
+    image: "assets/images/your-word-is-your-worth.png",
+    imageAlt: "Pen-and-ink sequence showing farm life, military service, ironwork, and engineering",
+    externalUrl: "https://www.wrath-bearingtree.com/2026/07/05/new-nonfiction-by-erick-l-sokn-you-can-never-know-for-sure/",
+    externalLabel: "Read a published excerpt at The Wrath-Bearing Tree →"
   }
 ];
