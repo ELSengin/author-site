@@ -74,7 +74,7 @@ window.WRITING_ITEMS = [
     description: "On Halloween night, three witches are making Witches Brew. Goblins are playing, trolls are gathering, and the Dragon Queen has been sent to find one last thing the party needs—a boy named Roy. Roy isn't easily frightened, and before the night is over, he discovers that things aren't always what they first appear to be.",
     image: "assets/images/witches-brew-cover.png",
     imageAlt: "Cover of Witches Brew by Erick L. Sokn",
-    externalUrl: "https://www.amazon.com/s?k=%22Witches+Brew%22+%22Erick+L.+Sokn%22",
+    externalUrl: "https://www.amazon.com/dp/B0HJ92RMX4",
     externalLabel: "View on Amazon →"
   },
   {
