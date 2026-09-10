@@ -279,7 +279,6 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   max-width:430px;
   height:auto;
   margin:30px auto 28px;
-  transform:translateX(-40px);
 }
 
 /* Education identity and corrected eight-module flow */
@@ -403,5 +402,55 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
     width:46%;
     max-width:155px;
     transform:translateX(-10px);
+  }
+}
+
+/* Writing page — book entries with artwork, stacked vertically */
+#book-list{
+  display:grid;
+  gap:28px;
+}
+.book-work-item{
+  display:grid;
+  grid-template-columns:minmax(220px, 330px) minmax(0, 1fr);
+  gap:34px;
+  align-items:start;
+  padding:28px;
+}
+.book-art img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  border:1px solid var(--line);
+}
+.book-copy h3{
+  margin:0 0 4px;
+  font-size:1.65rem;
+  line-height:1.15;
+}
+.book-copy .status{
+  margin:.35rem 0 0;
+}
+.book-copy .description{
+  margin:1rem 0 0;
+}
+.book-sample-note{
+  margin:1rem 0 0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-weight:700;
+  color:var(--accent-dark);
+}
+.book-links{
+  margin-top:18px;
+}
+
+@media(max-width:760px){
+  .book-work-item{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+  .book-art{
+    max-width:420px;
   }
 }
