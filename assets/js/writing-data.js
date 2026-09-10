@@ -60,6 +60,13 @@ window.WRITING_ITEMS = [
     internalUrl: "writing/one-choir.html"
   },
   {
+    section: "poetry",
+    title: "Witches Brew",
+    type: "Poem",
+    publication: "Independently published, 2026",
+    internalUrl: "writing/witches-brew.html"
+  },
+  {
     section: "books",
     title: "Witches Brew",
     type: "Illustrated Children's Book",
