@@ -9,24 +9,51 @@
 html,body{margin:0;width:100%;height:100%;background:var(--reader-bg);color:var(--reader-text)}
 body.reader-body{overflow:hidden;font-family:Arial,Helvetica,sans-serif}
 .reader-shell{height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:var(--reader-bg)}
-.reader-topbar,.reader-controls{display:flex;align-items:center;gap:14px;padding:10px 16px;background:var(--reader-panel);border-color:var(--reader-line);z-index:5}
+.reader-topbar,.reader-controls{display:flex;align-items:center;gap:12px;padding:8px 14px;background:var(--reader-panel);border-color:var(--reader-line);z-index:5}
 .reader-topbar{justify-content:space-between;border-bottom:1px solid var(--reader-line)}
 .reader-controls{justify-content:center;border-top:1px solid var(--reader-line)}
-.reader-title{font-family:Georgia,'Times New Roman',serif;font-size:1.05rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.reader-exit,.reader-button{appearance:none;border:1px solid var(--reader-line);background:transparent;color:var(--reader-text);border-radius:7px;padding:8px 11px;font:600 .9rem Arial,Helvetica,sans-serif;text-decoration:none;cursor:pointer}
+.reader-title{font-family:Georgia,'Times New Roman',serif;font-size:1rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.reader-exit,.reader-button{appearance:none;border:1px solid var(--reader-line);background:transparent;color:var(--reader-text);border-radius:7px;padding:7px 10px;font:600 .88rem Arial,Helvetica,sans-serif;text-decoration:none;cursor:pointer;white-space:nowrap}
 .reader-exit:hover,.reader-button:hover,.reader-exit:focus-visible,.reader-button:focus-visible{background:rgba(255,255,255,.08);outline:none}
 .reader-button:disabled{opacity:.32;cursor:default;background:transparent}
-.reader-stage{position:relative;min-height:0;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden;touch-action:pan-y;background:var(--reader-bg)}
+.reader-stage{position:relative;min-height:0;display:flex;align-items:center;justify-content:center;padding:6px;overflow:hidden;touch-action:pan-y;background:var(--reader-bg)}
 .reader-page{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;user-select:none;-webkit-user-select:none;-webkit-user-drag:none;box-shadow:0 6px 24px rgba(0,0,0,.42)}
-.reader-status{min-width:84px;text-align:center;color:var(--reader-muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.reader-status{min-width:70px;text-align:center;color:var(--reader-muted);font-size:.88rem;font-variant-numeric:tabular-nums}
 .reader-spacer{width:0}
-@media(max-width:600px){
-  .reader-topbar{padding:8px 10px}
-  .reader-controls{padding:8px 10px;gap:9px}
-  .reader-stage{padding:8px}
-  .reader-title{font-size:.95rem}
-  .reader-exit,.reader-button{padding:8px 9px;font-size:.84rem}
-  .reader-button .wide-label{display:none}
+
+/* Tablet: keep controls visible, but give the finished page almost all available space. */
+@media(max-width:1024px){
+  .reader-topbar,.reader-controls{padding:6px 10px;gap:8px}
+  .reader-stage{padding:3px}
+  .reader-title{font-size:.92rem}
+  .reader-exit,.reader-button{padding:7px 9px;font-size:.82rem}
+  .reader-status{min-width:58px;font-size:.82rem}
 }
+
+/* Phone: compact chrome so the page itself is the dominant element. */
+@media(max-width:600px){
+  .reader-topbar{padding:5px 7px}
+  .reader-controls{padding:5px 6px;gap:6px}
+  .reader-stage{padding:2px}
+  .reader-title{font-size:.82rem}
+  .reader-exit,.reader-button{padding:7px 8px;font-size:.76rem}
+  .reader-exit{max-width:42vw;overflow:hidden;text-overflow:ellipsis}
+  .reader-status{min-width:48px;font-size:.76rem}
+  .reader-button .wide-label{display:none}
+  #reader-fullscreen{font-size:0}
+  #reader-fullscreen::after{content:'⛶';font-size:1.15rem;line-height:1}
+}
+
+/* Landscape phones/tablets benefit from an even thinner header/footer. */
+@media(max-height:600px) and (orientation:landscape){
+  .reader-topbar,.reader-controls{padding-top:4px;padding-bottom:4px}
+  .reader-stage{padding:1px}
+}
+
 :fullscreen .reader-shell{height:100vh}
 :fullscreen .reader-topbar,:fullscreen .reader-controls{background:rgba(20,20,20,.92)}
+
+/* Fallback for browsers (notably iPhone Safari) that do not offer element fullscreen. */
+.reader-shell.reader-immersive{grid-template-rows:minmax(0,1fr)}
+.reader-shell.reader-immersive .reader-topbar,.reader-shell.reader-immersive .reader-controls{display:none}
+.reader-shell.reader-immersive .reader-stage{padding:0}

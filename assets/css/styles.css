@@ -461,3 +461,13 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
   flex-wrap:wrap;
   gap:10px 22px;
 }
+
+/* Illustrated-edition finalization note */
+.book-finalization-note{
+  margin:12px 0 0;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:.88rem;
+  line-height:1.45;
+  font-style:italic;
+  color:var(--muted);
+}
