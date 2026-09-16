@@ -110,3 +110,16 @@ html.reader-immersive-root,body.reader-immersive-root{
   .reader-share-thought .wide-label{display:none}
   .reader-share-thought .narrow-label{display:inline}
 }
+
+/* Successful feedback submission: replace the form with a compact completion state. */
+.reader-feedback-confirmation{text-align:center;padding:18px 0 12px}
+.reader-feedback-confirmation h2{margin:0 0 8px;font:700 1.75rem Georgia,'Times New Roman',serif}
+.reader-feedback-confirmation p{margin:0 0 18px;color:var(--reader-text);font-size:1rem}
+.reader-feedback-confirmation-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.reader-feedback-confirmation .reader-button{display:inline-block}
+.reader-return-writing{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.32)}
+@media(max-width:600px){
+  .reader-feedback-confirmation{padding:14px 0 8px}
+  .reader-feedback-confirmation h2{font-size:1.55rem}
+  .reader-feedback-confirmation-actions{gap:8px}
+}
