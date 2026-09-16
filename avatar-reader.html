@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9YTW4SWFCJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9YTW4SWFCJ');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Avatar — Illustrated Edition | Erick L. Sokn</title>
+<meta name="description" content="Read the illustrated edition of The Avatar by Erick L. Sokn.">
+<link rel="stylesheet" href="assets/css/content-reader.css">
+</head>
+<body class="reader-body">
+<div class="reader-shell" id="reader-shell">
+  <header class="reader-topbar">
+    <div class="reader-title">The Avatar — Illustrated Edition</div>
+    <a class="reader-exit" href="writing.html#book-list">Return to Writing</a>
+  </header>
+
+  <main class="reader-stage" id="reader-stage" aria-label="The Avatar illustrated poem reader">
+    <img class="reader-page" id="reader-page" src="" alt="" draggable="false">
+  </main>
+
+  <nav class="reader-controls" aria-label="Book navigation">
+    <button class="reader-button" id="reader-previous" type="button" aria-label="Previous page">← <span class="wide-label">Previous</span></button>
+    <div class="reader-status" id="reader-indicator" aria-live="polite"></div>
+    <button class="reader-button" id="reader-next" type="button" aria-label="Next page"><span class="wide-label">Next</span> →</button>
+    <button class="reader-button" id="reader-fullscreen" type="button">Full Screen</button>
+  </nav>
+</div>
+
+<script>
+// THE AVATAR READER — sequential page discovery.
+// The reader starts at 001 and stops at the first missing image.
+window.READER_CONFIG = {
+  title: "The Avatar",
+  folder: "assets/images/readers/the-avatar/",
+  prefix: "The_Avatar_Reader_",
+  extension: ".webp",
+  numberWidth: 3,
+  firstPage: 1
+};
+</script>
+<script src="assets/js/content-reader.js"></script>
+</body>
+</html>
