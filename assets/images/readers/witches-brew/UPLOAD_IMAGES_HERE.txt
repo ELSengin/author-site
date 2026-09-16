@@ -1,0 +1,12 @@
+Upload consecutively numbered WebP reader pages here.
+
+Examples:
+Witches_Brew_Reader_001.webp
+Witches_Brew_Reader_002.webp
+Witches_Brew_Reader_003.webp
+...
+
+The reader automatically starts at 001 and continues until the first missing sequential image.
+If only 001 through 005 are present, the reader displays 1 / 5 through 5 / 5.
+If 001 through 028 are present, it displays 1 / 28 through 28 / 28.
+Do not leave gaps in the numbering.
