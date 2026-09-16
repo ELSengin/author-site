@@ -1,0 +1,32 @@
+:root{
+  --reader-bg:#151515;
+  --reader-panel:#202020;
+  --reader-text:#f1eee8;
+  --reader-muted:#b9b4ac;
+  --reader-line:rgba(255,255,255,.14);
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;background:var(--reader-bg);color:var(--reader-text)}
+body.reader-body{overflow:hidden;font-family:Arial,Helvetica,sans-serif}
+.reader-shell{height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:var(--reader-bg)}
+.reader-topbar,.reader-controls{display:flex;align-items:center;gap:14px;padding:10px 16px;background:var(--reader-panel);border-color:var(--reader-line);z-index:5}
+.reader-topbar{justify-content:space-between;border-bottom:1px solid var(--reader-line)}
+.reader-controls{justify-content:center;border-top:1px solid var(--reader-line)}
+.reader-title{font-family:Georgia,'Times New Roman',serif;font-size:1.05rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.reader-exit,.reader-button{appearance:none;border:1px solid var(--reader-line);background:transparent;color:var(--reader-text);border-radius:7px;padding:8px 11px;font:600 .9rem Arial,Helvetica,sans-serif;text-decoration:none;cursor:pointer}
+.reader-exit:hover,.reader-button:hover,.reader-exit:focus-visible,.reader-button:focus-visible{background:rgba(255,255,255,.08);outline:none}
+.reader-button:disabled{opacity:.32;cursor:default;background:transparent}
+.reader-stage{position:relative;min-height:0;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden;touch-action:pan-y;background:var(--reader-bg)}
+.reader-page{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;user-select:none;-webkit-user-select:none;-webkit-user-drag:none;box-shadow:0 6px 24px rgba(0,0,0,.42)}
+.reader-status{min-width:84px;text-align:center;color:var(--reader-muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.reader-spacer{width:0}
+@media(max-width:600px){
+  .reader-topbar{padding:8px 10px}
+  .reader-controls{padding:8px 10px;gap:9px}
+  .reader-stage{padding:8px}
+  .reader-title{font-size:.95rem}
+  .reader-exit,.reader-button{padding:8px 9px;font-size:.84rem}
+  .reader-button .wide-label{display:none}
+}
+:fullscreen .reader-shell{height:100vh}
+:fullscreen .reader-topbar,:fullscreen .reader-controls{background:rgba(20,20,20,.92)}

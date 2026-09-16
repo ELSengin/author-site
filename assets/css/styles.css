@@ -454,3 +454,10 @@ work-list{display:grid;gap:16px}.work-item{background:var(--panel);border:1px so
     max-width:420px;
   }
 }
+
+/* Writing page — allow more than one action on an illustrated-book entry */
+.book-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 22px;
+}
