@@ -34,6 +34,37 @@
     <button class="reader-button" id="reader-next" type="button" aria-label="Next page"><span class="wide-label">Next</span> →</button>
     <button class="reader-button" id="reader-fullscreen" type="button">Full Screen</button>
   </nav>
+
+  <section class="reader-feedback" id="reader-feedback" hidden aria-labelledby="reader-feedback-title">
+    <div class="reader-feedback-inner">
+      <h2 id="reader-feedback-title">Share a thought</h2>
+      <p>I’d be interested in what you thought of <em>The Avatar</em>.</p>
+      <form id="reader-feedback-form" action="https://formsubmit.co/cf03cfc702e7c53e10493c70ad1f0f52" method="POST">
+        <input type="hidden" name="_subject" value="Reader thought — The Avatar">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="work" value="The Avatar">
+
+        <label>Your thought
+          <textarea name="message" required maxlength="3000"></textarea>
+        </label>
+
+        <label>Name <span>(optional)</span>
+          <input type="text" name="name" autocomplete="name" maxlength="100">
+        </label>
+
+        <label>Email <span>(optional — only if you’d like a reply)</span>
+          <input type="email" name="email" autocomplete="email" maxlength="254">
+        </label>
+
+        <div class="reader-feedback-actions">
+          <button class="reader-button" type="submit">Send thought</button>
+          <button class="reader-button" id="reader-feedback-cancel" type="button">Cancel</button>
+        </div>
+        <p class="reader-feedback-status" id="reader-feedback-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -45,7 +76,8 @@ window.READER_CONFIG = {
   prefix: "avatar_reader_",
   extension: ".webp",
   numberWidth: 3,
-  firstPage: 1
+  firstPage: 1,
+  feedback: true
 };
 </script>
 <script src="assets/js/content-reader.js"></script>
