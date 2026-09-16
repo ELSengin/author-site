@@ -57,3 +57,34 @@ body.reader-body{overflow:hidden;font-family:Arial,Helvetica,sans-serif}
 .reader-shell.reader-immersive{grid-template-rows:minmax(0,1fr)}
 .reader-shell.reader-immersive .reader-topbar,.reader-shell.reader-immersive .reader-controls{display:none}
 .reader-shell.reader-immersive .reader-stage{padding:0}
+
+/* Strong immersive fallback: detach the reader from normal page layout so no site/page
+   heading can remain above it on iPhone/iPad Safari. */
+html.reader-immersive-root,body.reader-immersive-root{
+  overflow:hidden!important;
+  width:100%!important;
+  height:100%!important;
+  background:var(--reader-bg)!important;
+}
+.reader-shell.reader-immersive{
+  position:fixed!important;
+  inset:0!important;
+  width:100vw!important;
+  height:100dvh!important;
+  min-height:100dvh!important;
+  z-index:2147483647!important;
+  grid-template-rows:minmax(0,1fr)!important;
+  background:var(--reader-bg)!important;
+}
+.reader-shell.reader-immersive .reader-topbar,
+.reader-shell.reader-immersive .reader-controls{display:none!important}
+.reader-shell.reader-immersive .reader-stage{
+  width:100%!important;
+  height:100%!important;
+  min-height:0!important;
+  padding:0!important;
+}
+.reader-shell.reader-immersive .reader-page{
+  max-width:100vw!important;
+  max-height:100dvh!important;
+}
