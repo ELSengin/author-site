@@ -18,6 +18,17 @@
   let touchStartY = null;
   let fallbackFullscreen = false;
 
+  function setImmersive(active) {
+    fallbackFullscreen = active;
+    readerShell.classList.toggle("reader-immersive", active);
+    document.documentElement.classList.toggle("reader-immersive-root", active);
+    document.body.classList.toggle("reader-immersive-root", active);
+    setFullscreenLabel(active);
+    // iOS Safari may retain browser chrome, but scrolling to the top prevents
+    // any document content outside the reader from occupying the viewport.
+    if (active) window.scrollTo(0, 0);
+  }
+
   function padPageNumber(number, width) {
     return String(number).padStart(width, "0");
   }
@@ -101,6 +112,8 @@
       goNext();
     } else if (event.key === "Escape" && document.fullscreenElement) {
       document.exitFullscreen();
+    } else if (event.key === "Escape" && fallbackFullscreen) {
+      setImmersive(false);
     }
   });
 
@@ -142,9 +155,7 @@
       }
     }
 
-    fallbackFullscreen = !fallbackFullscreen;
-    readerShell.classList.toggle("reader-immersive", fallbackFullscreen);
-    setFullscreenLabel(fallbackFullscreen);
+    setImmersive(!fallbackFullscreen);
   });
 
   document.addEventListener("fullscreenchange", () => {
