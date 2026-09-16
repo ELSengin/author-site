@@ -1,0 +1,7 @@
+Upload the Avatar website-reader pages into this folder using consecutive names:
+The_Avatar_Reader_001.webp
+The_Avatar_Reader_002.webp
+The_Avatar_Reader_003.webp
+...
+
+The reader automatically counts consecutive pages and stops at the first missing number.
