@@ -47,17 +47,28 @@ function renderBookItem(item) {
     copy.appendChild(sample);
   }
 
-  if (item.externalUrl) {
+  if (item.readerUrl || item.externalUrl) {
     const links = document.createElement("div");
     links.className = "work-links book-links";
-    const a = document.createElement("a");
-    a.href = item.externalUrl;
-    a.textContent = item.externalLabel || "Read →";
-    if (item.externalUrl.startsWith("http")) {
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
+
+    if (item.readerUrl) {
+      const readerLink = document.createElement("a");
+      readerLink.href = item.readerUrl;
+      readerLink.textContent = item.readerLabel || "Read Online →";
+      links.appendChild(readerLink);
     }
-    links.appendChild(a);
+
+    if (item.externalUrl) {
+      const a = document.createElement("a");
+      a.href = item.externalUrl;
+      a.textContent = item.externalLabel || "Read →";
+      if (item.externalUrl.startsWith("http")) {
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+      }
+      links.appendChild(a);
+    }
+
     copy.appendChild(links);
   }
 
@@ -106,13 +117,24 @@ function renderItems(section, targetId) {
       article.appendChild(status);
     }
 
-    if (item.externalUrl) {
+    if (item.readerUrl || item.externalUrl) {
       const links = document.createElement("div");
       links.className = "work-links";
-      const a = document.createElement("a");
-      a.href = item.externalUrl;
-      a.textContent = item.externalLabel || "Read →";
-      links.appendChild(a);
+
+      if (item.readerUrl) {
+        const readerLink = document.createElement("a");
+        readerLink.href = item.readerUrl;
+        readerLink.textContent = item.readerLabel || "Read Online →";
+        links.appendChild(readerLink);
+      }
+
+      if (item.externalUrl) {
+        const a = document.createElement("a");
+        a.href = item.externalUrl;
+        a.textContent = item.externalLabel || "Read →";
+        links.appendChild(a);
+      }
+
       article.appendChild(links);
     }
 
