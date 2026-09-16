@@ -15,6 +15,7 @@
   const feedbackForm = document.getElementById("reader-feedback-form");
   const feedbackCancel = document.getElementById("reader-feedback-cancel");
   const feedbackStatus = document.getElementById("reader-feedback-status");
+  const returnToWriting = document.querySelector(".reader-exit");
 
   let pages = [];
   let currentIndex = 0;
@@ -237,8 +238,33 @@
         if (!response.ok) throw new Error("Submission failed");
 
         feedbackForm.reset();
-        feedbackStatus.textContent = "Thank you. Your thought has been sent.";
-        submitButton.textContent = "Sent";
+        feedbackForm.hidden = true;
+
+        let confirmation = feedbackPanel.querySelector(".reader-feedback-confirmation");
+        if (!confirmation) {
+          confirmation = document.createElement("div");
+          confirmation.className = "reader-feedback-confirmation";
+          confirmation.innerHTML = `
+            <h2>Thank you.</h2>
+            <p>Your thought has been sent.</p>
+            <div class="reader-feedback-confirmation-actions">
+              <button class="reader-button reader-share-another" type="button">Share another thought</button>
+              <a class="reader-button reader-return-writing" href="${returnToWriting ? returnToWriting.href : "writing.html#book-list"}">Return to Writing</a>
+            </div>`;
+          feedbackPanel.querySelector(".reader-feedback-inner").appendChild(confirmation);
+
+          confirmation.querySelector(".reader-share-another").addEventListener("click", () => {
+            confirmation.hidden = true;
+            feedbackForm.hidden = false;
+            submitButton.disabled = false;
+            submitButton.textContent = "Send thought";
+            feedbackStatus.textContent = "";
+            const textarea = feedbackForm.querySelector('textarea[name="message"]');
+            if (textarea) textarea.focus();
+          });
+        } else {
+          confirmation.hidden = false;
+        }
       } catch (_) {
         feedbackStatus.textContent = "The message could not be sent. Please try again.";
         submitButton.disabled = false;
