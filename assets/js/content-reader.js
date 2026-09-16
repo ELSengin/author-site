@@ -11,6 +11,10 @@
   const pageIndicator = document.getElementById("reader-indicator");
   const readerShell = document.getElementById("reader-shell");
   const readerStage = document.getElementById("reader-stage");
+  const feedbackPanel = document.getElementById("reader-feedback");
+  const feedbackForm = document.getElementById("reader-feedback-form");
+  const feedbackCancel = document.getElementById("reader-feedback-cancel");
+  const feedbackStatus = document.getElementById("reader-feedback-status");
 
   let pages = [];
   let currentIndex = 0;
@@ -80,7 +84,20 @@
     pageImage.alt = `${config.title || "Reader"}, page ${currentIndex + 1} of ${pages.length}`;
     pageIndicator.textContent = `${currentIndex + 1} / ${pages.length}`;
     previousButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex === pages.length - 1;
+
+    const isLastPage = currentIndex === pages.length - 1;
+    if (config.feedback && isLastPage) {
+      nextButton.disabled = false;
+      nextButton.classList.add("reader-share-thought");
+      nextButton.innerHTML = '<span class="wide-label">Share a thought</span><span class="narrow-label">Thought</span> →';
+      nextButton.setAttribute("aria-label", "Share a thought");
+    } else {
+      nextButton.disabled = isLastPage;
+      nextButton.classList.remove("reader-share-thought");
+      nextButton.innerHTML = '<span class="wide-label">Next</span> →';
+      nextButton.setAttribute("aria-label", "Next page");
+      if (feedbackPanel) feedbackPanel.hidden = true;
+    }
 
     preload(currentIndex - 1);
     preload(currentIndex + 1);
@@ -101,7 +118,16 @@
   }
 
   previousButton.addEventListener("click", goPrevious);
-  nextButton.addEventListener("click", goNext);
+  nextButton.addEventListener("click", () => {
+    const isLastPage = pages.length > 0 && currentIndex === pages.length - 1;
+    if (config.feedback && isLastPage && feedbackPanel) {
+      feedbackPanel.hidden = false;
+      const textarea = feedbackPanel.querySelector("textarea");
+      if (textarea) textarea.focus();
+      return;
+    }
+    goNext();
+  });
 
   document.addEventListener("keydown", event => {
     if (event.key === "ArrowLeft") {
@@ -178,6 +204,46 @@
 
     currentIndex = 0;
     updateReader();
+  }
+
+  if (feedbackCancel && feedbackPanel) {
+    feedbackCancel.addEventListener("click", () => {
+      feedbackPanel.hidden = true;
+      nextButton.focus();
+    });
+  }
+
+  if (feedbackForm && feedbackStatus) {
+    feedbackForm.addEventListener("submit", async event => {
+      event.preventDefault();
+      const message = feedbackForm.querySelector('textarea[name="message"]');
+      if (!message || !message.value.trim()) {
+        feedbackStatus.textContent = "Please write a thought before sending.";
+        if (message) message.focus();
+        return;
+      }
+
+      const submitButton = feedbackForm.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      feedbackStatus.textContent = "Sending…";
+
+      try {
+        const endpoint = feedbackForm.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: new FormData(feedbackForm)
+        });
+        if (!response.ok) throw new Error("Submission failed");
+
+        feedbackForm.reset();
+        feedbackStatus.textContent = "Thank you. Your thought has been sent.";
+        submitButton.textContent = "Sent";
+      } catch (_) {
+        feedbackStatus.textContent = "The message could not be sent. Please try again.";
+        submitButton.disabled = false;
+      }
+    });
   }
 
   initializeReader();
