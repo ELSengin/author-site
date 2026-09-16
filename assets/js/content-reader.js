@@ -16,6 +16,7 @@
   let currentIndex = 0;
   let touchStartX = null;
   let touchStartY = null;
+  let fallbackFullscreen = false;
 
   function padPageNumber(number, width) {
     return String(number).padStart(width, "0");
@@ -122,22 +123,33 @@
     else goPrevious();
   }, { passive: true });
 
-  if (document.fullscreenEnabled) {
-    fullscreenButton.addEventListener("click", async () => {
+  function setFullscreenLabel(active) {
+    fullscreenButton.textContent = active ? "Exit Full Screen" : "Full Screen";
+    fullscreenButton.setAttribute("aria-label", active ? "Exit full screen" : "Full screen");
+  }
+
+  fullscreenButton.addEventListener("click", async () => {
+    // Use the browser Fullscreen API where available. iPhone Safari may not expose it
+    // for ordinary page elements, so keep the control visible and provide an immersive
+    // fallback that hides the reader chrome and maximizes the page within Safari.
+    if (document.fullscreenEnabled && readerShell.requestFullscreen) {
       try {
         if (!document.fullscreenElement) await readerShell.requestFullscreen();
         else await document.exitFullscreen();
+        return;
       } catch (_) {
-        // Fullscreen can be denied by the browser or device; the reader remains usable.
+        // Fall through to the CSS immersive mode.
       }
-    });
+    }
 
-    document.addEventListener("fullscreenchange", () => {
-      fullscreenButton.textContent = document.fullscreenElement ? "Exit Full Screen" : "Full Screen";
-    });
-  } else {
-    fullscreenButton.hidden = true;
-  }
+    fallbackFullscreen = !fallbackFullscreen;
+    readerShell.classList.toggle("reader-immersive", fallbackFullscreen);
+    setFullscreenLabel(fallbackFullscreen);
+  });
+
+  document.addEventListener("fullscreenchange", () => {
+    setFullscreenLabel(Boolean(document.fullscreenElement));
+  });
 
   pageImage.addEventListener("dragstart", event => event.preventDefault());
   readerStage.addEventListener("contextmenu", event => event.preventDefault());

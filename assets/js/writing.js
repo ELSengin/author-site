@@ -72,6 +72,13 @@ function renderBookItem(item) {
     copy.appendChild(links);
   }
 
+  if (item.noteText) {
+    const note = document.createElement("p");
+    note.className = "book-finalization-note";
+    note.textContent = item.noteText;
+    copy.appendChild(note);
+  }
+
   article.appendChild(copy);
   return article;
 }

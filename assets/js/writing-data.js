@@ -83,6 +83,18 @@ window.WRITING_ITEMS = [
   },
   {
     section: "books",
+    title: "The Avatar",
+    type: "Illustrated Poetry",
+    status: "2026",
+    description: "The Avatar follows Erick the Unready through a world of monsters and impossible odds—an epic adventure of courage, resourcefulness, skill, and a little luck.\n\nOriginally published in The Leading Edge (March 2000), this illustrated edition brings the poem to life through corresponding imagery, expanding the story beyond the page.",
+    image: "assets/images/the-avatar-book-card.webp",
+    imageAlt: "Erick the Unready standing battle-worn on a fantasy battlefield at sunset",
+    readerUrl: "avatar-reader.html",
+    readerLabel: "Read the Illustrated Edition →",
+    noteText: "Illustrated edition currently being finalized. Some imagery may be updated. Available on Amazon soon."
+  },
+  {
+    section: "books",
     title: "My Favorite Pair of Boots",
     type: "Poetry Collection",
     status: "Seeking publication",
