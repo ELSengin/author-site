@@ -88,3 +88,25 @@ html.reader-immersive-root,body.reader-immersive-root{
   max-width:100vw!important;
   max-height:100dvh!important;
 }
+
+
+/* Optional end-of-reader feedback. Hidden until Share a thought is selected. */
+.narrow-label{display:none}
+.reader-feedback[hidden]{display:none!important}
+.reader-feedback{position:absolute;left:0;right:0;bottom:0;z-index:20;background:rgba(21,21,21,.98);border-top:1px solid var(--reader-line);max-height:78dvh;overflow:auto;padding:18px}
+.reader-feedback-inner{width:min(620px,100%);margin:0 auto}
+.reader-feedback h2{margin:0 0 5px;font:700 1.2rem Georgia,'Times New Roman',serif}
+.reader-feedback p{margin:0 0 14px;color:var(--reader-muted);font-size:.9rem}
+.reader-feedback label{display:block;margin:11px 0 0;font-size:.86rem;font-weight:700}
+.reader-feedback label span{font-weight:400;color:var(--reader-muted)}
+.reader-feedback textarea,.reader-feedback input{display:block;width:100%;margin-top:5px;border:1px solid var(--reader-line);border-radius:7px;background:#101010;color:var(--reader-text);font:16px Arial,Helvetica,sans-serif;padding:10px}
+.reader-feedback textarea{min-height:120px;resize:vertical}
+.reader-feedback-actions{display:flex;gap:8px;margin-top:14px}
+.reader-feedback-status{min-height:1.2em;margin:10px 0 0!important}
+.reader-share-thought{border-color:rgba(255,255,255,.3)}
+@media(max-width:600px){
+  .reader-feedback{padding:12px 10px;max-height:82dvh}
+  .reader-feedback textarea{min-height:96px}
+  .reader-share-thought .wide-label{display:none}
+  .reader-share-thought .narrow-label{display:inline}
+}
