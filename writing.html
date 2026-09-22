@@ -21,14 +21,14 @@
 <style>
 .writing-heading-row{display:flex;align-items:center;gap:22px;margin:6px 0 10px}.writing-heading-row h1{margin:0}
 .life-details{display:block}.life-details summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;color:#324b59;font-weight:700}.life-details summary::-webkit-details-marker{display:none}.life-details summary::after{content:"About the LIFE Wheel";font-size:.9rem;white-space:nowrap}.life-details[open] summary::after{content:"About the LIFE Wheel ↑"}
-.life-mini-wheel{width:118px;height:118px;border-radius:50%;object-fit:contain;display:block;transition:transform .15s ease}.life-details summary:hover .life-mini-wheel,.life-details summary:focus .life-mini-wheel{transform:scale(1.025)}
+.life-mini-wheel{width:236px;height:236px;border-radius:50%;object-fit:contain;display:block;transition:transform .15s ease}.life-details summary:hover .life-mini-wheel,.life-details summary:focus .life-mini-wheel{transform:scale(1.025)}
 .life-expanded{padding-top:28px;padding-bottom:10px}.writing-life-wheel-main{display:block;width:100%;max-width:520px;height:auto;margin:0 auto 30px}
 .life-dimensions{width:min(900px,100%);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;column-gap:58px;row-gap:20px}.life-dimension{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:start}.life-dimension .life-icon{width:68px;height:58px;display:flex;align-items:center;justify-content:center}.life-dimension svg{display:block;width:100%;height:100%}.life-dimension h3{margin:0 0 3px;font-size:1.18rem}.life-dimension p{margin:0;line-height:1.42}.life-dimension.living{color:#0d3768}.life-dimension.loving{color:#c84e00}.life-dimension.learning{color:#08778b}.life-dimension.integration{color:#4a2b78}.life-dimension.extrapolation{color:#287321}.life-dimension p{color:var(--ink)}
-.writing-index-section{padding-top:28px;padding-bottom:28px}.writing-index-section+.writing-index-section{border-top:1px solid rgba(83,73,58,.22)}.writing-index-section.band{background:transparent}.writing-section{border:0;outline:0}.writing-section summary{outline:0}.writing-section summary:focus{outline:0}.writing-section summary:focus-visible{outline:2px solid rgba(50,75,89,.35);outline-offset:6px;border-radius:2px}.writing-section .section-intro{margin:4px 0 0;color:#625c53;max-width:760px}.writing-section[open] .section-intro{margin-bottom:20px}
+.writing-index-section{padding-top:28px;padding-bottom:28px}.writing-index-section+.writing-index-section{border-top:1px solid rgba(83,73,58,.22)}.writing-index-section.band{background:transparent}.writing-section{border:0;outline:0}.writing-section summary{outline:0}.writing-section summary:focus{outline:0}.writing-section summary:focus-visible{outline:2px solid rgba(50,75,89,.35);outline-offset:6px;border-radius:2px}.writing-section summary{display:flex;align-items:center;justify-content:space-between;gap:24px}.section-summary-copy{display:flex;flex-direction:column;align-items:flex-start}.section-summary-title{display:block}.writing-section .section-intro{display:block;margin:5px 0 0;color:#625c53;max-width:760px;font-size:.96rem;font-weight:400;line-height:1.4}.writing-section[open] .section-intro{margin-bottom:0}
 .edition-list{margin-top:14px;padding-top:12px;border-top:1px solid rgba(0,0,0,.12)}.edition-list-title{margin:0 0 7px;font-weight:700}.edition-link,.edition-pending{display:block;margin:6px 0}.edition-note{font-size:.92rem;color:#5f5a52;margin-left:6px}
 .book-art-button{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;border-radius:10px}.book-art-button img{display:block;width:100%;height:auto;border-radius:10px}.book-art-button:focus-visible{outline:2px solid rgba(50,75,89,.45);outline-offset:4px}
 .book-image-lightbox{position:fixed;inset:0;z-index:9999;background:rgba(15,16,17,.88);display:none;align-items:center;justify-content:center;padding:4vh 4vw}.book-image-lightbox.is-open{display:flex}.book-image-lightbox-inner{position:relative;max-width:92vw;max-height:92vh;display:flex;align-items:center;justify-content:center}.book-image-lightbox-image{display:block;max-width:90vw;max-height:90vh;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 40px rgba(0,0,0,.45)}.book-image-lightbox-close{position:absolute;right:-44px;top:-12px;width:38px;height:38px;border:1px solid rgba(255,255,255,.65);border-radius:50%;background:rgba(0,0,0,.35);color:#fff;font-size:28px;line-height:32px;cursor:pointer}body.lightbox-open{overflow:hidden}
-@media(max-width:650px){.writing-heading-row{gap:12px;flex-wrap:wrap}.life-mini-wheel{width:88px;height:88px}.life-details summary::after{font-size:.8rem}.life-dimensions{grid-template-columns:1fr;row-gap:18px}.life-dimension{grid-template-columns:62px 1fr;gap:12px}.life-dimension .life-icon{width:56px;height:50px}.book-image-lightbox-close{right:0;top:-46px}}
+@media(max-width:650px){.writing-heading-row{gap:12px;flex-wrap:wrap}.life-mini-wheel{width:170px;height:170px}.life-details summary::after{font-size:.8rem}.life-dimensions{grid-template-columns:1fr;row-gap:18px}.life-dimension{grid-template-columns:62px 1fr;gap:12px}.life-dimension .life-icon{width:56px;height:50px}.book-image-lightbox-close{right:0;top:-46px}}
 </style>
 
 </head>
@@ -110,18 +110,18 @@
 </section>
 
 <section class="section compact writing-index-section">
-  <div class="site-shell"><details class="writing-section"><summary>Poetry</summary>
-    <p class="section-intro">Published poems and current poetry projects.</p><div id="poetry-list" class="work-list"></div>
+  <div class="site-shell"><details class="writing-section"><summary><span class="section-summary-copy"><span class="section-summary-title">Poetry</span><span class="section-intro">Published poems and current poetry projects.</span></span></summary>
+    <div id="poetry-list" class="work-list"></div>
   </details></div>
 </section>
 <section class="section compact writing-index-section">
-  <div class="site-shell"><details class="writing-section"><summary>Essays &amp; Articles</summary>
-    <p class="section-intro">Published nonfiction, essays, and articles.</p><div id="essay-list" class="work-list"></div>
+  <div class="site-shell"><details class="writing-section"><summary><span class="section-summary-copy"><span class="section-summary-title">Essays &amp; Articles</span><span class="section-intro">Published nonfiction, essays, and articles.</span></span></summary>
+    <div id="essay-list" class="work-list"></div>
   </details></div>
 </section>
 <section class="section compact writing-index-section">
-  <div class="site-shell"><details class="writing-section"><summary>Books</summary>
-    <p class="section-intro">Published books and current book-length projects.</p><div id="book-list" class="work-list"></div>
+  <div class="site-shell"><details class="writing-section"><summary><span class="section-summary-copy"><span class="section-summary-title">Books</span><span class="section-intro">Published books and current book-length projects.</span></span></summary>
+    <div id="book-list" class="work-list"></div>
   </details></div>
 </section>
 
