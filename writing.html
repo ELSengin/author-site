@@ -19,80 +19,28 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 
 <style>
-/* Writing page — simplified LIFE wheel and readable definitions */
-.writing-life-wheel-section{
-  padding-top:10px;
-  padding-bottom:36px;
-}
-.writing-life-wheel-main{
-  display:block;
-  width:100%;
-  max-width:380px;
-  height:auto;
-  margin-left:230px;
-  margin-right:auto;
-  margin-bottom:28px;
-}
-.life-dimensions{
-  width:min(900px,100%);
-  margin-left:58px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  column-gap:58px;
-  row-gap:20px;
-}
-.life-dimension{
-  display:grid;
-  grid-template-columns:76px 1fr;
-  gap:14px;
-  align-items:start;
-}
-.life-dimension .life-icon{
-  width:68px;
-  height:58px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.life-dimension svg{
-  display:block;
-  width:100%;
-  height:100%;
-}
-.life-dimension h3{
-  margin:0 0 3px;
-  font-size:1.18rem;
-}
-.life-dimension p{
-  margin:0;
-  line-height:1.42;
-}
-.life-dimension.living{color:#0d3768}
-.life-dimension.loving{color:#c84e00}
-.life-dimension.learning{color:#08778b}
-.life-dimension.integration{color:#4a2b78}
-.life-dimension.extrapolation{color:#287321}
-.life-dimension p{color:var(--ink)}
-
-@media(max-width:900px){
-  .writing-life-wheel-main{
-    max-width:380px;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  .life-dimensions{
-    width:min(760px,100%);
-    margin-left:auto;
-    margin-right:auto;
-    column-gap:34px;
-  }
-}
-@media(max-width:650px){
-  .writing-life-wheel-main{max-width:92vw}
-  .life-dimensions{grid-template-columns:1fr;row-gap:18px}
-  .life-dimension{grid-template-columns:62px 1fr;gap:12px}
-  .life-dimension .life-icon{width:56px;height:50px}
-}
+/* Writing page — compact, expandable LIFE framework */
+.page-head .site-shell{position:relative}
+.life-details{display:block}
+.life-details summary{list-style:none;cursor:pointer;position:absolute;top:32px;left:230px;display:flex;align-items:center;gap:8px;color:#324b59;font-weight:700}
+.life-details summary::-webkit-details-marker{display:none}
+.life-details summary::after{content:"About LIFE";font-size:.82rem;letter-spacing:.02em}
+.life-mini-wheel{width:66px;height:66px;border-radius:50%;object-fit:cover;display:block;transition:transform .15s ease}
+.life-details summary:hover .life-mini-wheel,.life-details summary:focus .life-mini-wheel{transform:scale(1.04)}
+.life-expanded{padding-top:28px;padding-bottom:8px}
+.writing-life-wheel-main{display:block;width:100%;max-width:330px;height:auto;margin:0 auto 26px}
+.life-dimensions{width:min(900px,100%);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;column-gap:58px;row-gap:20px}
+.life-dimension{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:start}
+.life-dimension .life-icon{width:68px;height:58px;display:flex;align-items:center;justify-content:center}
+.life-dimension svg{display:block;width:100%;height:100%}
+.life-dimension h3{margin:0 0 3px;font-size:1.18rem}
+.life-dimension p{margin:0;line-height:1.42}
+.life-dimension.living{color:#0d3768}.life-dimension.loving{color:#c84e00}.life-dimension.learning{color:#08778b}.life-dimension.integration{color:#4a2b78}.life-dimension.extrapolation{color:#287321}.life-dimension p{color:var(--ink)}
+.edition-list{margin-top:14px;padding-top:12px;border-top:1px solid rgba(0,0,0,.12)}
+.edition-list-title{margin:0 0 7px;font-weight:700}
+.edition-link,.edition-pending{display:block;margin:6px 0}
+.edition-note{font-size:.92rem;color:#5f5a52;margin-left:6px}
+@media(max-width:650px){.life-details summary{position:static;margin:8px 0 4px}.life-mini-wheel{width:54px;height:54px}.life-details summary::after{font-size:.76rem}.life-dimensions{grid-template-columns:1fr;row-gap:18px}.life-dimension{grid-template-columns:62px 1fr;gap:12px}.life-dimension .life-icon{width:56px;height:50px}}
 </style>
 
 </head>
@@ -107,11 +55,12 @@
     <div class="eyebrow">Writing</div>
     <h1>Writing</h1>
     <p>My writing draws from a lifetime of experience—work, military service, family, relationships, curiosity, and reflection. It comes from living and learning, bringing experiences and lessons together to better understand what was, and sometimes carrying those insights forward to imagine what might be.</p>
-  </div>
-</section>
 
-<section class="section writing-life-wheel-section">
-  <div class="site-shell">
+    <details class="life-details">
+      <summary aria-label="About the LIFE writing framework">
+        <img class="life-mini-wheel" src="assets/images/writing-life-wheel-simplified.png" alt="">
+      </summary>
+      <div class="life-expanded" id="life-expanded">
     <img class="writing-life-wheel-main"
          src="assets/images/writing-life-wheel-simplified.png"
          alt="Life writing wheel — Living, Loving, Learning, Integration, Extrapolation">
@@ -168,12 +117,14 @@
         <div><h3>Extrapolation</h3><p>Extending understanding beyond the known—imagining possibilities, drawing insights forward, and creating stories that explore what might be.</p></div>
       </article>
     </div>
+      </details>
+    </div>
   </div>
 </section>
 
 <section class="section compact">
   <div class="site-shell">
-    <details class="writing-section" open>
+    <details class="writing-section">
       <summary>Poetry</summary>
       <p class="section-intro">Published poems and current poetry projects.</p>
       <div id="poetry-list" class="work-list"></div>
@@ -183,7 +134,7 @@
 
 <section class="section band">
   <div class="site-shell">
-    <details class="writing-section" open>
+    <details class="writing-section">
       <summary>Essays &amp; Articles</summary>
       <div id="essay-list" class="work-list"></div>
     </details>
@@ -192,7 +143,7 @@
 
 <section class="section">
   <div class="site-shell">
-    <details class="writing-section" open>
+    <details class="writing-section">
       <summary>Books</summary>
       <div id="book-list" class="work-list"></div>
     </details>
