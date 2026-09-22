@@ -120,7 +120,7 @@ window.WRITING_ITEMS = [
     status: "Seeking publication",
     description: "What began as a request from my daughter to write down the stories I had told over the years became an examination of the experiences, people, and decisions that shaped how I think and how I try to live. From farm life and military service through ironwork, engineering, family, loss, and reflection, the book follows those experiences and what I learned from the people and events along the way.",
     image: "assets/images/your-word-is-your-worth.png",
-    fullImage: "assets/images/your-word-is-your-worth.png",
+    fullImage: "assets/images/your-word-is-your-worth-full-strip.png",
     imageAlt: "Pen-and-ink sequence showing farm life, military service, ironwork, and engineering",
     externalUrl: "https://www.wrath-bearingtree.com/2026/07/05/new-nonfiction-by-erick-l-sokn-you-can-never-know-for-sure/",
     externalLabel: "Read a published excerpt at The Wrath-Bearing Tree →"
