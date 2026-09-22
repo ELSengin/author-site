@@ -66,7 +66,7 @@ window.WRITING_ITEMS = [
     publication: "Published as an illustrated children's book, 2026.",
     internalUrl: "writing/witches-brew.html",
     readerUrl: "witches-brew-reader.html",
-    readerLabel: "Read the Illustrated Edition →"
+    readerLabel: "Read the Original Illustrated Edition →"
   },
   {
     section: "books",
@@ -74,24 +74,31 @@ window.WRITING_ITEMS = [
     type: "Illustrated Children's Book",
     status: "Independently published, 2026",
     description: "On Halloween night, three witches are making Witches Brew. Goblins are playing, trolls are gathering, and the Dragon Queen has been sent to find one last thing the party needs—a boy named Roy. Roy isn't easily frightened, and before the night is over, he discovers that things aren't always what they first appear to be.",
-    image: "assets/images/witches-brew-cover.png",
+    image: "assets/images/witches-brew-cover-remastered.webp",
     imageAlt: "Cover of Witches Brew by Erick L. Sokn",
     readerUrl: "witches-brew-reader.html",
-    readerLabel: "Read the Illustrated Edition →",
-    externalUrl: "https://www.amazon.com/dp/B0HJ92RMX4",
-    externalLabel: "View on Amazon →"
+    readerLabel: "Read the Original Illustrated Edition →",
+    readerNote: "Complete landscape edition — free to read",
+    editions: [
+      { label: "Digitally Remastered eBook →", note: "Portrait-format Kindle edition", url: "https://www.amazon.com/dp/B0HJ92RMX4" },
+      { label: "Full-Color Paperback →", note: "8 × 10 storybook", url: "https://www.amazon.com/dp/B0HKFHDM5N" },
+      // When Amazon issues the product page, paste its URL between the quotes below.
+      { label: "Easy Coloring Book", note: "Ages 4–7 · Coming soon", url: "" },
+      // When Amazon issues the product page, paste its URL between the quotes below.
+      { label: "Detailed Coloring Book", note: "More detailed coloring edition · Coming soon", url: "" }
+    ]
   },
   {
     section: "books",
     title: "The Avatar",
     type: "Illustrated Poetry",
     status: "2026",
-    description: "The Avatar follows Erick the Unready through a world of monsters and impossible odds—an epic adventure of courage, resourcefulness, skill, and a little luck.\n\nOriginally published in The Leading Edge (March 2000), this illustrated edition brings the poem to life through corresponding imagery, expanding the story beyond the page.",
-    image: "assets/images/the-avatar-book-card.webp",
-    imageAlt: "Erick the Unready standing battle-worn on a fantasy battlefield at sunset",
+    description: "The Avatar follows Erick the Unready through a world of monsters and impossible odds—an epic adventure of courage, resourcefulness, skill, and a little luck. Originally published in The Leading Edge (March 2000), this illustrated edition brings the poem to life through corresponding imagery, expanding the story beyond the page.",
+    image: "assets/images/the-avatar-card.png",
+    imageAlt: "Illustration from The Avatar",
     readerUrl: "avatar-reader.html",
     readerLabel: "Read the Illustrated Edition →",
-    noteText: "Illustrated edition currently being finalized. Some imagery may be updated. Available on Amazon soon."
+    sampleText: "Illustrated edition currently being finalized. Some imagery may be updated. Available on Amazon soon."
   },
   {
     section: "books",

@@ -47,36 +47,61 @@ function renderBookItem(item) {
     copy.appendChild(sample);
   }
 
-  if (item.readerUrl || item.externalUrl) {
+  if (item.readerUrl) {
     const links = document.createElement("div");
     links.className = "work-links book-links";
-
-    if (item.readerUrl) {
-      const readerLink = document.createElement("a");
-      readerLink.href = item.readerUrl;
-      readerLink.textContent = item.readerLabel || "Read Online →";
-      links.appendChild(readerLink);
+    const a = document.createElement("a");
+    a.href = item.readerUrl;
+    a.textContent = item.readerLabel || "Read →";
+    links.appendChild(a);
+    if (item.readerNote) {
+      const note = document.createElement("span");
+      note.className = "edition-note";
+      note.textContent = item.readerNote;
+      links.appendChild(note);
     }
-
-    if (item.externalUrl) {
-      const a = document.createElement("a");
-      a.href = item.externalUrl;
-      a.textContent = item.externalLabel || "Read →";
-      if (item.externalUrl.startsWith("http")) {
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-      }
-      links.appendChild(a);
-    }
-
     copy.appendChild(links);
   }
 
-  if (item.noteText) {
-    const note = document.createElement("p");
-    note.className = "book-finalization-note";
-    note.textContent = item.noteText;
-    copy.appendChild(note);
+  if (item.editions && item.editions.length) {
+    const editions = document.createElement("div");
+    editions.className = "edition-list";
+    const title = document.createElement("p");
+    title.className = "edition-list-title";
+    title.textContent = "Available editions";
+    editions.appendChild(title);
+    item.editions.forEach(edition => {
+      const row = document.createElement(edition.url ? "a" : "span");
+      row.className = edition.url ? "edition-link" : "edition-pending";
+      if (edition.url) {
+        row.href = edition.url;
+        row.target = "_blank";
+        row.rel = "noopener noreferrer";
+      }
+      const label = document.createElement("strong");
+      label.textContent = edition.label;
+      row.appendChild(label);
+      if (edition.note) {
+        const note = document.createElement("span");
+        note.className = "edition-note";
+        note.textContent = edition.note;
+        row.appendChild(note);
+      }
+      editions.appendChild(row);
+    });
+    copy.appendChild(editions);
+  } else if (item.externalUrl) {
+    const links = document.createElement("div");
+    links.className = "work-links book-links";
+    const a = document.createElement("a");
+    a.href = item.externalUrl;
+    a.textContent = item.externalLabel || "Read →";
+    if (item.externalUrl.startsWith("http")) {
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+    }
+    links.appendChild(a);
+    copy.appendChild(links);
   }
 
   article.appendChild(copy);
@@ -124,24 +149,23 @@ function renderItems(section, targetId) {
       article.appendChild(status);
     }
 
-    if (item.readerUrl || item.externalUrl) {
+    if (item.externalUrl) {
       const links = document.createElement("div");
       links.className = "work-links";
+      const a = document.createElement("a");
+      a.href = item.externalUrl;
+      a.textContent = item.externalLabel || "Read →";
+      links.appendChild(a);
+      article.appendChild(links);
+    }
 
-      if (item.readerUrl) {
-        const readerLink = document.createElement("a");
-        readerLink.href = item.readerUrl;
-        readerLink.textContent = item.readerLabel || "Read Online →";
-        links.appendChild(readerLink);
-      }
-
-      if (item.externalUrl) {
-        const a = document.createElement("a");
-        a.href = item.externalUrl;
-        a.textContent = item.externalLabel || "Read →";
-        links.appendChild(a);
-      }
-
+    if (item.readerUrl) {
+      const links = document.createElement("div");
+      links.className = "work-links";
+      const a = document.createElement("a");
+      a.href = item.readerUrl;
+      a.textContent = item.readerLabel || "Read →";
+      links.appendChild(a);
       article.appendChild(links);
     }
 
