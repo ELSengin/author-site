@@ -1,3 +1,7 @@
+function ensureBookLightbox(){let o=document.getElementById("book-image-lightbox");if(o)return o;o=document.createElement("div");o.id="book-image-lightbox";o.className="book-image-lightbox";o.setAttribute("aria-hidden","true");o.innerHTML=`<div class="book-image-lightbox-inner" role="dialog" aria-modal="true" aria-label="Enlarged book image"><button class="book-image-lightbox-close" type="button" aria-label="Close enlarged image">&times;</button><img class="book-image-lightbox-image" alt=""></div>`;document.body.appendChild(o);o.querySelector(".book-image-lightbox-close").addEventListener("click",closeBookLightbox);o.addEventListener("click",e=>{if(e.target===o)closeBookLightbox();});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&o.classList.contains("is-open"))closeBookLightbox();});return o;}
+function openBookLightbox(src,alt){const o=ensureBookLightbox(),i=o.querySelector(".book-image-lightbox-image");i.src=src;i.alt=alt||"";o.classList.add("is-open");o.setAttribute("aria-hidden","false");document.body.classList.add("lightbox-open");o.querySelector(".book-image-lightbox-close").focus();}
+function closeBookLightbox(){const o=document.getElementById("book-image-lightbox");if(!o)return;o.classList.remove("is-open");o.setAttribute("aria-hidden","true");document.body.classList.remove("lightbox-open");}
+
 function renderBookItem(item) {
   const article = document.createElement("article");
   article.className = "work-item book-work-item";
@@ -6,11 +10,17 @@ function renderBookItem(item) {
     const figure = document.createElement("div");
     figure.className = "book-art";
 
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "book-art-button";
+    button.setAttribute("aria-label", "Enlarge " + item.title + " image");
     const img = document.createElement("img");
     img.src = item.image;
     img.alt = item.imageAlt || "";
     img.loading = "lazy";
-    figure.appendChild(img);
+    button.appendChild(img);
+    button.addEventListener("click", () => openBookLightbox(item.fullImage || item.image, item.imageAlt || item.title));
+    figure.appendChild(button);
     article.appendChild(figure);
   }
 
