@@ -1,3 +1,0 @@
-Upload Witches Brew reader images here.
-Required sequential filenames: Witches_Brew_Reader_001.webp, Witches_Brew_Reader_002.webp, Witches_Brew_Reader_003.webp, etc.
-Do not leave gaps in the numbering.
