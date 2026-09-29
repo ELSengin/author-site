@@ -1,0 +1,3 @@
+Upload the Witches Brew reader images into this folder.
+Required names: Witches_Brew_Reader_001.webp, Witches_Brew_Reader_002.webp, etc.
+Keep numbering consecutive with no gaps.
