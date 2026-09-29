@@ -71,7 +71,7 @@ window.WRITING_ITEMS = [
     title: "Witches Brew",
     type: "Illustrated Children's Book",
     status: "Independently published, 2026",
-    description: "Witches Brew is a rhyming Halloween story filled with witches, goblins, trolls, a dragon, and a little boy willing to find out for himself what is really going on. Originally written for my children nearly thirty years ago, I recently returned to the story and illustrated it for my grandchildren.",
+    description: "Witches Brew is a rhyming Halloween story filled with witches, goblins, trolls, a dragon, and a little boy willing to find out for himself what is really going on. Written in 1998 for my children, I returned to the poem in 2026 and illustrated it for my grandchildren.",
     image: "assets/images/witches-brew-cover-8x10-thumb.webp",
     fullImage: "assets/images/witches-brew-cover-8x10-full.jpg",
     imageAlt: "Cover of Witches Brew by Erick L. Sokn",
