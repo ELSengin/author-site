@@ -64,30 +64,19 @@ window.WRITING_ITEMS = [
     title: "Witches Brew",
     type: "Poem",
     publication: "Published as an illustrated children's book, 2026.",
-    internalUrl: "writing/witches-brew.html",
-    readerUrl: "witches-brew-reader.html",
-    readerLabel: "Read the Original Illustrated Edition →"
+    internalUrl: "writing/witches-brew.html"
   },
   {
     section: "books",
     title: "Witches Brew",
     type: "Illustrated Children's Book",
     status: "Independently published, 2026",
-    description: "On Halloween night, three witches are making Witches Brew. Goblins are playing, trolls are gathering, and the Dragon Queen has been sent to find one last thing the party needs—a boy named Roy. Roy isn't easily frightened, and before the night is over, he discovers that things aren't always what they first appear to be.",
+    description: "Witches Brew is a rhyming Halloween story filled with witches, goblins, trolls, a dragon, and a little boy willing to find out for himself what is really going on. Originally written for my children nearly thirty years ago, I recently returned to the story and illustrated it for my grandchildren.",
     image: "assets/images/witches-brew-cover-8x10-thumb.webp",
     fullImage: "assets/images/witches-brew-cover-8x10-full.jpg",
     imageAlt: "Cover of Witches Brew by Erick L. Sokn",
-    readerUrl: "witches-brew-reader.html",
-    readerLabel: "Read the Original Illustrated Edition →",
-    readerNote: "Complete landscape edition — free to read",
-    editions: [
-      { label: "Digitally Remastered eBook →", note: "Portrait-format Kindle edition", url: "https://www.amazon.com/dp/B0HJ92RMX4" },
-      { label: "Full-Color Paperback →", note: "8 × 10 storybook", url: "https://www.amazon.com/dp/B0HKFHDM5N" },
-      // When Amazon issues the product page, paste its URL between the quotes below.
-      { label: "Easy Coloring Book", note: "Ages 4–7 · Coming soon", url: "" },
-      // When Amazon issues the product page, paste its URL between the quotes below.
-      { label: "Detailed Coloring Book", note: "More detailed coloring edition · Coming soon", url: "" }
-    ]
+    externalUrl: "writing/witches-brew-book.html",
+    externalLabel: "Explore Witches Brew →"
   },
   {
     section: "books",
@@ -120,7 +109,7 @@ window.WRITING_ITEMS = [
     status: "Seeking publication",
     description: "What began as a request from my daughter to write down the stories I had told over the years became an examination of the experiences, people, and decisions that shaped how I think and how I try to live. From farm life and military service through ironwork, engineering, family, loss, and reflection, the book follows those experiences and what I learned from the people and events along the way.",
     image: "assets/images/your-word-is-your-worth.png",
-    fullImage: "assets/images/your-word-is-your-worth-full-strip.png",
+    fullImage: "assets/images/your-word-is-your-worth.png",
     imageAlt: "Pen-and-ink sequence showing farm life, military service, ironwork, and engineering",
     externalUrl: "https://www.wrath-bearingtree.com/2026/07/05/new-nonfiction-by-erick-l-sokn-you-can-never-know-for-sure/",
     externalLabel: "Read a published excerpt at The Wrath-Bearing Tree →"
