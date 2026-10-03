@@ -82,14 +82,60 @@ window.WRITING_ITEMS = [
     section: "books",
     title: "The Avatar",
     type: "Illustrated Poetry",
-    status: "2026",
-    description: "The Avatar follows Erick the Unready through a world of monsters and impossible odds—an epic adventure of courage, resourcefulness, skill, and a little luck. Originally published in The Leading Edge (March 2000), this illustrated edition brings the poem to life through corresponding imagery, expanding the story beyond the page.",
+    status: "Published 2026",
+    descriptionHeading: "An Adventure in Verse",
+    description: "The Avatar is a fantasy poem inspired by adventure role-playing games and the characters who inhabit them. It follows one seemingly unready hero through an encounter with dragons, goblins, magic, and a battle where both skill and luck play their roles.",
+    descriptionParagraphs: ["The Avatar is a fantasy poem inspired by adventure role-playing games and the characters who inhabit them. It follows one seemingly unready hero through an encounter with dragons, goblins, magic, and a battle where both skill and luck play their roles.", "First published in The Leading Edge in 2000, The Avatar now brings its epic fantasy battle to life in an illustrated edition. The illustrations expand the world beyond the words, revealing the sweep of the battlefield and the intensity of each encounter.", "The illustrations were developed specifically around the story, its characters, and each scene using AI imaging technology, then edited and refined until they aligned with the images I had in mind."],
+    readingHeading: "The Battle, Scene by Scene",
+    readingDescription: "Fifty full-color story illustrations carry the poem through a battle of magic, steel, and fire. Both the Kindle and paperback editions use landscape layouts, capturing the sweep of the battlefield and its opposing forces in a cinematic style.",
     image: "assets/images/the-avatar-card-thumb.webp",
     fullImage: "assets/images/the-avatar-card-master.png",
     imageAlt: "Illustration from The Avatar",
     readerUrl: "avatar-reader.html",
     readerLabel: "Read the Illustrated Edition →",
-    sampleText: "Illustrated edition currently being finalized. Some imagery may be updated. Available on Amazon soon."
+    aPlus: {
+      banner: {
+        image: "assets/images/avatar-aplus/01_Story_World_Banner_1940x600.jpg",
+        alt: "A warrior overlooking a mountain valley, casting a spell, and facing a red dragon."
+      },
+      charactersHeading: "Meet the Characters of The Avatar",
+      characters: [
+        {
+          name: "Erick The Unready",
+          image: "assets/images/avatar-aplus/02_Erick_The_Unready_600.jpg",
+          alt: "Erick The Unready aims his bow in a rocky mountain pass.",
+          text: "A bow, a blade, and a spell book give one warrior a fighting chance against overwhelming odds."
+        },
+        {
+          name: "The Goblins",
+          image: "assets/images/avatar-aplus/02_The_Goblins_600.jpg",
+          alt: "Three armored goblins advance through smoke on the battlefield.",
+          text: "Small, quick, and opportunistic, the goblins look for an opening in the chaos of battle."
+        },
+        {
+          name: "The Fire Dragon",
+          image: "assets/images/avatar-aplus/02_The_Fire_Dragon_600.jpg",
+          alt: "A red fire-dragon bares its teeth against a mountain sunset.",
+          text: "Fire, claws, and a fearsome reputation confront a hero who refuses to smell of fear."
+        }
+      ],
+      storyHeading: "An Adventure in Verse",
+      storyParagraphs: [
+        "The Avatar is a fantasy poem inspired by adventure role-playing games and the characters who inhabit them. It follows one seemingly unready hero through an encounter with dragons, goblins, magic, and a battle where both skill and luck play their roles.",
+        "First published in The Leading Edge in 2000, The Avatar now brings its epic fantasy battle to life in an illustrated edition. The illustrations expand the world beyond the words, revealing the sweep of the battlefield and the intensity of each encounter.",
+        "The illustrations were developed specifically around the story, its characters, and each scene using AI imaging technology, then edited and refined until they aligned with the images I had in mind."
+      ],
+      feature: {
+        heading: "The Battle, Scene by Scene",
+        image: "assets/images/avatar-aplus/04_The_Battle_1940x1200.jpg",
+        alt: "Erick raises his round shield against blue lightning while a red dragon breathes fire.",
+        text: "Fifty full-color story illustrations carry the poem through a battle of magic, steel, and fire. Both the Kindle and paperback editions use landscape layouts, capturing the sweep of the battlefield and its opposing forces in a cinematic style."
+      }
+    },
+    editions: [
+      { label: "Kindle eBook", url: "https://www.amazon.com/dp/B0HL11L77L" },
+      { label: "Paperback", url: "https://www.amazon.com/dp/B0HL8R13CJ" }
+    ]
   },
   {
     section: "books",

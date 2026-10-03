@@ -1,3 +1,26 @@
+function ensureAPlusStyles() {
+  if (document.getElementById("aplus-showcase-styles")) return;
+  const style = document.createElement("style");
+  style.id = "aplus-showcase-styles";
+  style.textContent = `
+    .aplus-showcase { margin: 1.5rem 0; }
+    .aplus-showcase img { display: block; max-width: 100%; height: auto; }
+    .aplus-banner { width: 100%; margin: 0 0 1.4rem; }
+    .aplus-heading { margin: 1.1rem 0 .65rem; }
+    .aplus-character-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .aplus-character img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .aplus-character h5 { margin: .55rem 0 .25rem; font-size: 1rem; }
+    .aplus-character p, .aplus-story p, .aplus-feature p { margin: .35rem 0 .7rem; }
+    .aplus-story { margin: 1.25rem 0 1.5rem; }
+    .aplus-feature img { width: 100%; margin-bottom: .8rem; }
+    @media (max-width: 720px) {
+      .aplus-character-grid { grid-template-columns: 1fr; }
+      .aplus-character { max-width: 32rem; }
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 function ensureBookLightbox(){let o=document.getElementById("book-image-lightbox");if(o)return o;o=document.createElement("div");o.id="book-image-lightbox";o.className="book-image-lightbox";o.setAttribute("aria-hidden","true");o.innerHTML=`<div class="book-image-lightbox-inner" role="dialog" aria-modal="true" aria-label="Enlarged book image"><button class="book-image-lightbox-close" type="button" aria-label="Close enlarged image">&times;</button><img class="book-image-lightbox-image" alt=""></div>`;document.body.appendChild(o);o.querySelector(".book-image-lightbox-close").addEventListener("click",closeBookLightbox);o.addEventListener("click",e=>{if(e.target===o)closeBookLightbox();});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&o.classList.contains("is-open"))closeBookLightbox();});return o;}
 function openBookLightbox(src,alt){const o=ensureBookLightbox(),i=o.querySelector(".book-image-lightbox-image");i.src=src;i.alt=alt||"";o.classList.add("is-open");o.setAttribute("aria-hidden","false");document.body.classList.add("lightbox-open");o.querySelector(".book-image-lightbox-close").focus();}
 function closeBookLightbox(){const o=document.getElementById("book-image-lightbox");if(!o)return;o.classList.remove("is-open");o.setAttribute("aria-hidden","true");document.body.classList.remove("lightbox-open");}
@@ -43,10 +66,27 @@ function renderBookItem(item) {
     copy.appendChild(status);
   }
 
-  if (item.description) {
+  if (item.descriptionHeading) {
+    const heading = document.createElement("h4");
+    heading.textContent = item.descriptionHeading;
+    copy.appendChild(heading);
+  }
+
+  const descriptions = item.descriptionParagraphs || (item.description ? [item.description] : []);
+  descriptions.forEach(text => {
     const p = document.createElement("p");
     p.className = "description";
-    p.textContent = item.description;
+    p.textContent = text;
+    copy.appendChild(p);
+  });
+
+  if (item.readingDescription) {
+    const heading = document.createElement("h4");
+    heading.textContent = item.readingHeading;
+    copy.appendChild(heading);
+    const p = document.createElement("p");
+    p.className = "description";
+    p.textContent = item.readingDescription;
     copy.appendChild(p);
   }
 
@@ -55,6 +95,84 @@ function renderBookItem(item) {
     sample.className = "book-sample-note";
     sample.textContent = item.sampleText;
     copy.appendChild(sample);
+  }
+
+  if (item.aPlus) {
+    ensureAPlusStyles();
+    const ap = document.createElement("section");
+    ap.className = "aplus-showcase";
+    ap.setAttribute("aria-label", `${item.title} illustrated edition details`);
+
+    if (item.aPlus.banner) {
+      const banner = document.createElement("img");
+      banner.className = "aplus-banner";
+      banner.src = item.aPlus.banner.image;
+      banner.alt = item.aPlus.banner.alt || "";
+      banner.loading = "lazy";
+      ap.appendChild(banner);
+    }
+
+    if (item.aPlus.characters && item.aPlus.characters.length) {
+      const heading = document.createElement("h4");
+      heading.className = "aplus-heading";
+      heading.textContent = item.aPlus.charactersHeading || "Meet the Characters";
+      ap.appendChild(heading);
+
+      const grid = document.createElement("div");
+      grid.className = "aplus-character-grid";
+      item.aPlus.characters.forEach(character => {
+        const card = document.createElement("div");
+        card.className = "aplus-character";
+        const img = document.createElement("img");
+        img.src = character.image;
+        img.alt = character.alt || "";
+        img.loading = "lazy";
+        card.appendChild(img);
+        const name = document.createElement("h5");
+        name.textContent = character.name;
+        card.appendChild(name);
+        const desc = document.createElement("p");
+        desc.textContent = character.text;
+        card.appendChild(desc);
+        grid.appendChild(card);
+      });
+      ap.appendChild(grid);
+    }
+
+    if (item.aPlus.storyParagraphs && item.aPlus.storyParagraphs.length) {
+      const story = document.createElement("div");
+      story.className = "aplus-story";
+      const heading = document.createElement("h4");
+      heading.className = "aplus-heading";
+      heading.textContent = item.aPlus.storyHeading || "About the Illustrated Edition";
+      story.appendChild(heading);
+      item.aPlus.storyParagraphs.forEach(text => {
+        const p = document.createElement("p");
+        p.textContent = text;
+        story.appendChild(p);
+      });
+      ap.appendChild(story);
+    }
+
+    if (item.aPlus.feature) {
+      const feature = document.createElement("div");
+      feature.className = "aplus-feature";
+      const img = document.createElement("img");
+      img.src = item.aPlus.feature.image;
+      img.alt = item.aPlus.feature.alt || "";
+      img.loading = "lazy";
+      feature.appendChild(img);
+      const heading = document.createElement("h4");
+      heading.className = "aplus-heading";
+      heading.textContent = item.aPlus.feature.heading;
+      feature.appendChild(heading);
+      const desc = document.createElement("p");
+      desc.textContent = item.aPlus.feature.text;
+      feature.appendChild(desc);
+      ap.appendChild(feature);
+    }
+
+    copy.appendChild(ap);
   }
 
   if (item.readerUrl) {
