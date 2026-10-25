@@ -28,7 +28,7 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "Dead Center",
     type: "Poem",
-    publication: "Accepted for publication by Möbius: The Poetry Magazine",
+    publication: "Accepted for publication by Möbius: The Poetry Magazine — Spring 1999",
     internalUrl: "writing/dead-center.html"
   },
    {
@@ -102,8 +102,8 @@ window.WRITING_ITEMS = [
     type: "Illustrated Children's Book",
     status: "Published 2026",
     description: "Tom the Tasty Turkey — A Thanksgiving Tale is a rhyming illustrated story about a curious turkey who sets off to discover what is happening in town.",
-    image: "assets/images/readers/tom-tasty-turkey/thumbnails/cover-400.jpg",
-    fullImage: "assets/images/readers/tom-tasty-turkey/thumbnails/cover-800.jpg",
+    image: "assets/images/tom-tasty-turkey-card-thumb.jpg",
+    fullImage: "assets/images/tom-tasty-turkey-card-full.jpg",
     imageAlt: "Cover of Tom the Tasty Turkey — A Thanksgiving Tale",
     readerUrl: "tom-tasty-turkey-reader.html",
     readerLabel: "Read the Illustrated Edition →",
