@@ -28,7 +28,7 @@ window.WRITING_ITEMS = [
     section: "poetry",
     title: "Dead Center",
     type: "Poem",
-    publication: "Originally published in Möbius: The Poetry Magazine — Spring 1999",
+    publication: "Accepted for publication by Möbius: The Poetry Magazine",
     internalUrl: "writing/dead-center.html"
   },
    {
@@ -83,18 +83,35 @@ window.WRITING_ITEMS = [
     title: "The Avatar",
     type: "Illustrated Poetry",
     status: "Published 2026",
-    description: "The Avatar is a fantasy poem inspired by adventure role-playing games and the characters who inhabit them. It follows one seemingly unready hero through an encounter with dragons, goblins, magic, and a battle where both skill and luck play their roles.",
+    descriptionParagraphs: ["The Avatar is a fantasy poem inspired by adventure role-playing games and the characters who inhabit them. It follows one seemingly unready hero through an encounter with dragons, goblins, magic, and a battle where both skill and luck play their roles.", "The poem was begun by my friend Bill, who wrote the opening lines through the question, ‘Why should I fear you dragon?’ After his death, I took up what he had begun and completed the poem. It was first published in The Leading Edge in 2000."],
     image: "assets/images/the-avatar-card-thumb.webp",
     fullImage: "assets/images/the-avatar-card-master.png",
     imageAlt: "Illustration from The Avatar",
     readerUrl: "avatar-reader.html",
-    readerLabel: "Read the Illustrated Edition →",
+    readerLabel: "Read an Illustrated Preview →",
     editions: [
       { label: "Kindle eBook", url: "https://www.amazon.com/dp/B0HL11L77L" },
       { label: "Paperback", url: "https://www.amazon.com/dp/B0HL8R13CJ" }
     ],
     externalUrl: "writing/the-avatar-book.html",
     externalLabel: "Explore The Avatar →"
+  },
+  {
+    section: "books",
+    title: "Tom the Tasty Turkey",
+    type: "Illustrated Children's Book",
+    status: "Published 2026",
+    description: "Tom the Tasty Turkey — A Thanksgiving Tale is a rhyming illustrated story about a curious turkey who sets off to discover what is happening in town.",
+    image: "assets/tom-tasty-turkey/thumbnails/cover-400.jpg",
+    fullImage: "assets/tom-tasty-turkey/thumbnails/cover-800.jpg",
+    imageAlt: "Cover of Tom the Tasty Turkey — A Thanksgiving Tale",
+    readerUrl: "tom-tasty-turkey-reader.html",
+    readerLabel: "Read the Illustrated Edition →",
+    editions: [
+      { label: "Kindle eBook", url: "https://www.amazon.com/dp/B0HNXQYH4R" },
+      { label: "Paperback", url: "https://www.amazon.com/dp/B0HP27B2SQ" },
+      { label: "Coloring Book — Link coming soon" }
+    ]
   },
   {
     section: "books",
